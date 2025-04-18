@@ -5,56 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Patrícia Pattas Vendas e Serviços</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f7f7f7;
-      color: #333;
+    :root {
+      --roxo: #6a0dad;
+      --lilas: #d8b4f8;
+      --amarelo: #f9dc5c;
+      --fundo: #f4f1fa;
+      --texto: #2e2e2e;
     }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: var(--fundo);
+      color: var(--texto);
+    }
+
     header {
-      background: #c0392b;
+      background: var(--roxo);
       color: white;
-      padding: 20px;
+      padding: 30px 20px;
       text-align: center;
     }
+
     nav {
-      background: #e74c3c;
+      background: var(--lilas);
       display: flex;
       justify-content: center;
-      gap: 15px;
-      padding: 10px;
+      gap: 20px;
+      padding: 15px;
     }
+
     nav a {
-      color: white;
+      color: var(--roxo);
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
     }
+
+    nav a:hover {
+      color: var(--amarelo);
+    }
+
     section {
       padding: 20px;
     }
+
+    h2 {
+      color: var(--roxo);
+    }
+
     .card {
       background: white;
-      padding: 15px;
-      margin: 10px auto;
-      max-width: 600px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(106, 13, 173, 0.1);
     }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: #c0392b;
-      color: white;
-      margin-top: 30px;
-    }
+
     .btn {
       display: inline-block;
-      background: #c0392b;
-      color: white;
+      background: var(--amarelo);
+      color: var(--roxo);
       padding: 10px 20px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-weight: bold;
       margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: var(--roxo);
+      color: white;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -62,7 +87,7 @@
 
   <header>
     <h1>Patrícia Pattas</h1>
-    <p>Vendas e Serviços em Angola</p>
+    <p>Vendas e Serviços com elegância e confiança</p>
   </header>
 
   <nav>
@@ -79,25 +104,24 @@
       <p>Produto em stock. Envio para todo o país.</p>
       <a class="btn" href="https://wa.me/244947116658">Encomendar pelo WhatsApp</a>
     </div>
-    <!-- Adicione mais produtos aqui -->
   </section>
 
   <section id="servicos">
     <h2>Serviços Disponíveis</h2>
     <div class="card">
       <h3>Consultoria Comercial</h3>
-      <p>Ajudamos você a organizar, vender e divulgar melhor seus produtos.</p>
+      <p>Organizamos e divulgamos os seus produtos com estratégia e inovação.</p>
     </div>
     <div class="card">
       <h3>Distribuição Local</h3>
-      <p>Fazemos entregas em tempo útil para clientes e parceiros.</p>
+      <p>Entregas rápidas e seguras dentro de Angola.</p>
     </div>
   </section>
 
   <section id="contacto">
     <h2>Fale Connosco</h2>
     <div class="card">
-      <p><strong>Telefone:</strong> +244 926837464</p>
+      <p><strong>Telefone:</strong> +244 947 116 658</p>
       <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1BoyA2k81U/" target="_blank">Patrícia Pattas</a></p>
       <p><strong>Email:</strong> pattasvendas@gmail.com</p>
     </div>
@@ -109,3 +133,4 @@
 
 </body>
 </html>
+  
