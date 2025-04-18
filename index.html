@@ -1,182 +1,190 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!DOCTYPE html><html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Patrícia Pattas - Vendas e Serviços</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patrícia Pattas</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #EEDAFB; /* lilás claro */
+      background-color: #E6CCF2; /* lilás claro */
       color: #333;
     }
-
     header {
-      background-color: #6A0DAD; /* roxo */
+      background-color: #4B0082; /* roxo escuro */
       padding: 1rem;
       text-align: center;
     }
-
+    header h1 {
+      color: #E6CCF2;
+      margin: 0;
+      font-size: 2rem;
+    }
     nav a {
+      color: #E6CCF2;
       margin: 0 1rem;
       text-decoration: none;
-      color: #EEDAFB; /* lilás claro */
       font-weight: bold;
-      font-family: 'Brush Script MT', cursive;
-      font-size: 1.2rem;
     }
-
-    h1, h2 {
+    .banner {
       text-align: center;
-      color: #6A0DAD;
+      padding: 2rem;
     }
-
+    .banner a {
+      background-color: #FFD700; /* amarelo */
+      color: #000;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
     section {
       padding: 2rem;
     }
-
-    .button {
-      background-color: #6A0DAD;
-      color: yellow;
-      border: none;
-      padding: 1rem 2rem;
-      margin: 1rem;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
+    h2 {
+      color: #4B0082;
     }
-
-    .highlight {
+    .produto, .servico, .blog-item {
       background-color: #fff;
       padding: 1rem;
-      margin: 1rem auto;
-      max-width: 600px;
-      border-left: 5px solid #6A0DAD;
+      margin: 1rem 0;
+      border-radius: 8px;
     }
-
+    .produto a, .servico a {
+      background-color: #FFD700;
+      color: #000;
+      padding: 0.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+    }
     footer {
-      background-color: #6A0DAD;
-      color: #EEDAFB;
+      background-color: #4B0082;
+      color: #E6CCF2;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
     }
-
+    form {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    input, textarea {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #4B0082;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+    }
     @media (max-width: 768px) {
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
-      .button {
-        width: 100%;
-        box-sizing: border-box;
+      .banner a {
+        display: block;
+        margin: 0.5rem auto;
       }
     }
   </style>
 </head>
 <body>
-
-<header>
-  <h1>Patrícia Pattas</h1>
-  <p>Vendas e Serviços com elegância e confiança</p>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#sobre">Sobre Nós</a>
-    <a href="#produtos">Produtos</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#comprar">Como Comprar</a>
-    <a href="#galeria">Galeria</a>
-    <a href="#blog">Blog</a>
-    <a href="#contacto">Contactos</a>
-  </nav>
-</header>
-
-<section id="home">
-  <h2>Destaques da Semana</h2>
-  <div class="highlight">
-    <h3>Lata de Salsicha Frankfurt (50 unidades)</h3>
-    <p>Preço: 8.000 KZ</p>
-    <a href="https://wa.me/244947116658"><button class="button">Comprar via WhatsApp</button></a>
-  </div>
-  <p style="text-align:center"><strong>Compre com Multicaixa de forma simples!</strong></p>
-  <div style="text-align:center;">
-    <a href="#produtos"><button class="button">Ver Produtos</button></a>
-    <a href="#servicos"><button class="button">Ver Serviços</button></a>
-    <a href="https://wa.me/244947116658"><button class="button">Fale Connosco no WhatsApp</button></a>
-  </div>
-</section>
-
-<section id="sobre">
-  <h2>Sobre Nós</h2>
-  <p>Patrícia Pattas Vendas e Serviços nasceu com o compromisso de oferecer produtos de qualidade e atendimento personalizado. Nossa missão é simplificar a vida dos nossos clientes, nossa visão é ser referência em vendas locais e nossos valores incluem confiança, qualidade e dedicação.</p>
-</section>
-
-<section id="produtos">
-  <h2>Produtos</h2>
-  <div class="highlight">
-    <h3>Nome do Produto</h3>
-    <p>Descrição curta</p>
-    <p>Preço: xxxx KZ</p>
-    <a href="https://wa.me/244947116658"><button class="button">Comprar via WhatsApp</button></a>
-  </div>
-</section>
-
-<section id="servicos">
-  <h2>Serviços</h2>
-  <div class="highlight">
-    <h3>Makeup & Crochê</h3>
-    <p>Serviços personalizados com qualidade e estilo.</p>
-    <a href="https://wa.me/244947116658"><button class="button">Agendar Atendimento</button></a>
-  </div>
-  <div class="highlight">
-    <h3>Consultoria Comercial</h3>
-    <p>Organizamos e divulgamos os seus produtos com estratégia e inovação.</p>
-    <a href="https://wa.me/244947116658"><button class="button">Agendar Atendimento</button></a>
-  </div>
-</section>
-
-<section id="comprar">
-  <h2>Como Comprar</h2>
-  <ol>
-    <li>Escolha o produto</li>
-    <li>Envie pedido via WhatsApp</li>
-    <li>Receba os dados para pagamento Multicaixa ou bancário</li>
-    <li>Confirmação e entrega</li>
-  </ol>
-  <p>Para dúvidas ou envio de comprovativo:</p>
-  <a href="https://wa.me/244947116658"><button class="button">Fale Connosco</button></a>
-</section>
-
-<section id="galeria">
-  <h2>Galeria</h2>
-  <p>Em breve com fotos reais de clientes, produtos e equipe!</p>
-</section>
-
-<section id="blog">
-  <h2>Blog e Dicas</h2>
-  <div class="highlight">
-    <h3>Como cuidar do seu cabelo com nossos produtos naturais</h3>
-    <p>Veja essas dicas simples para manter a saúde dos seus fios.</p>
-  </div>
-  <div class="highlight">
-    <h3>5 passos para organizar seu evento com nossa ajuda</h3>
-    <p>Quer fazer bonito no seu evento? Veja nossas sugestões!</p>
-  </div>
-</section>
-
-<section id="contacto">
-  <h2>Contactos</h2>
-  <p><strong>WhatsApp:</strong> <a href="https://wa.me/244947116658">+244 947 116 658</a></p>
-  <p><strong>Email:</strong> pattasvendas@gmail.com</p>
-  <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1BoyA2k81U/">Patrícia Pattas</a></p>
-</section>
-
-<footer>
-  <p>© 2025 Patrícia Pattas Vendas e Serviços – Todos os direitos reservados.</p>
-  <p>Formas de pagamento: Multicaixa e Transferência Bancária</p>
-</footer>
-
+  <header>
+    <h1>Patrícia Pattas</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#sobre-nos">Sobre</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#como-comprar">Como Comprar</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#blog">Blog</a>
+      <a href="#contato">Contactos</a>
+    </nav>
+  </header>  <div class="banner">
+    <p><strong>Vendas e Serviços com elegância e confiança</strong></p>
+    <a href="#produtos">Ver Produtos</a>
+    <a href="#servicos">Ver Serviços</a>
+    <a href="https://wa.me/244947116658">Fale Connosco no WhatsApp</a>
+  </div>  <section id="destaques">
+    <h2>Destaques da Semana</h2>
+    <div class="produto">
+      <h3>Lata de Salsicha Frankfurt (50 unidades)</h3>
+      <p><strong>Preço:</strong> 8.000 KZ</p>
+      <a href="https://wa.me/244947116658">Comprar via WhatsApp</a>
+      <p><em>Compre com Multicaixa de forma simples!</em></p>
+    </div>
+  </section>  <section id="sobre-nos">
+    <h2>Sobre Nós</h2>
+    <p>Patrícia Pattas Vendas e Serviços nasceu com o compromisso de oferecer produtos de qualidade e atendimento personalizado.</p>
+    <ul>
+      <li><strong>Missão:</strong> simplificar a vida dos nossos clientes</li>
+      <li><strong>Visão:</strong> ser referência em vendas locais</li>
+      <li><strong>Valores:</strong> confiança, qualidade e dedicação</li>
+    </ul>
+  </section>  <section id="produtos">
+    <h2>Produtos</h2>
+    <div class="produto">
+      <h3>Nome do Produto</h3>
+      <p>Descrição curta</p>
+      <p><strong>Preço:</strong> xxxx KZ</p>
+      <a href="https://wa.me/244947116658">Comprar via WhatsApp</a>
+    </div>
+  </section>  <section id="servicos">
+    <h2>Serviços</h2>
+    <div class="servico">
+      <h3>Makeup e Crochê</h3>
+      <p>Atendimentos personalizados com toque de beleza e arte.</p>
+    </div>
+    <div class="servico">
+      <h3>Consultoria Comercial</h3>
+      <p>Organizamos e divulgamos os seus produtos com estratégia e inovação.</p>
+      <a href="https://wa.me/244947116658">Agendar Atendimento</a>
+    </div>
+  </section>  <section id="como-comprar">
+    <h2>Como Comprar</h2>
+    <ol>
+      <li>Escolha o produto</li>
+      <li>Envie pedido via WhatsApp</li>
+      <li>Receba os dados para pagamento Multicaixa ou bancário</li>
+      <li>Confirmação e entrega</li>
+    </ol>
+    <p><a href="https://wa.me/244947116658">Fale Connosco</a></p>
+  </section>  <section id="galeria">
+    <h2>Galeria</h2>
+    <p>Em breve com fotos reais de clientes, produtos e equipa!</p>
+  </section>  <section id="blog">
+    <h2>Blog e Dicas</h2>
+    <div class="blog-item">
+      <h3>Como cuidar do seu cabelo com nossos produtos naturais</h3>
+      <p>Veja essas dicas simples para manter a saúde dos seus fios.</p>
+    </div>
+    <div class="blog-item">
+      <h3>5 passos para organizar seu evento com nossa ajuda</h3>
+      <p>Quer fazer bonito no seu evento? Veja nossas sugestões!</p>
+    </div>
+  </section>  <section id="contato">
+    <h2>Contacto</h2>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/244947116658">+244 947116658</a></p>
+    <p><strong>Email:</strong> pattasvendas@gmail.com</p>
+    <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1BoyA2k81U/">Patrícia Pattas</a></p>
+    <form>
+      <label>Nome:<br><input type="text" name="nome"></label><br>
+      <label>Telefone ou WhatsApp:<br><input type="text" name="telefone"></label><br>
+      <label>Mensagem:<br><textarea name="mensagem"></textarea></label><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>  <footer>
+    <p>© 2025 Patrícia Pattas Vendas e Serviços – Todos os direitos reservados.</p>
+    <p>Formas de pagamento: Multicaixa e Transferência Bancária</p>
+  </footer>
 </body>
 </html>
- 
