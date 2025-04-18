@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Serviços – Patrícia Pattas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #c9162c;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+nav {
+  background: #eee;
+  text-align: center;
+  padding: 1rem 0;
+}
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #c9162c;
+  font-weight: bold;
+}
+main {
+  padding: 2rem;
+}
+  <header><h1>Serviços</h1></header>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="produtos.html">Produtos</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+  <main>
+    <p>Prestamos serviços personalizados como:</p>
+    <ul>
+      <li>Encomendas sob medida</li>
+      <li>Consultoria para revenda</li>
+      <li>Entrega por zona</li>
+    </ul>
+  </main>
+</body>
+</html>
