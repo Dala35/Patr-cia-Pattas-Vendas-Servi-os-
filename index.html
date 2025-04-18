@@ -5,130 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Patrícia Pattas Vendas e Serviços</title>
   <style>
+    :root {
+      --roxo: #6a0dad;
+      --lilas: #d8b4f8;
+      --amarelo: #f9dc5c;
+      --fundo: #f4f1fa;
+      --texto: #2e2e2e;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #f3f0f8;
-      color: #333;
+      background: var(--fundo);
+      color: var(--texto);
     }
 
     header {
-      background-color: #6b4c9a;
+      background: var(--roxo);
       color: white;
-      padding: 20px;
+      padding: 30px 20px;
       text-align: center;
     }
 
     nav {
-      background-color: #9b59b6;
+      background: var(--lilas);
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      gap: 20px;
+      padding: 15px;
     }
 
     nav a {
-      color: white;
-      padding: 15px;
+      color: var(--roxo);
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--amarelo);
     }
 
     section {
-      padding: 30px 20px;
-    }
-
-    h2 {
-      color: #6b4c9a;
-    }
-
-    .btn {
-      background-color: #f4c542;
-      color: #222;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      margin-top: 10px;
-      display: inline-block;
-      border-radius: 5px;
-    }
-
-    form {
-      max-width: 500px;
-      margin: auto;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    footer {
-      background-color: #6b4c9a;
-      color: white;
-      text-align: center;
       padding: 20px;
     }
 
-    /* Responsividade */
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
+    h2 {
+      color: var(--roxo);
+    }
 
-      section {
-        padding: 20px 10px;
-      }
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(106, 13, 173, 0.1);
+    }
 
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
+    .btn {
+      display: inline-block;
+      background: var(--amarelo);
+      color: var(--roxo);
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: var(--roxo);
+      color: white;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Patrícia Pattas</h1>
-  <p>Vendas e Serviços</p>
-</header>
+  <header>
+    <h1>Patrícia Pattas</h1>
+    <p>Vendas e Serviços com elegância e confiança</p>
+  </header>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#sobre">Sobre Nós</a>
-  <a href="#produtos">Produtos</a>
-  <a href="#servicos">Serviços</a>
-  <a href="#como-comprar">Como Comprar</a>
-  <a href="#galeria">Galeria</a>
-  <a href="#blog">Blog</a>
-  <a href="#contato">Contato</a>
-</nav>
+  <nav>
+    <a href="#produtos">Produtos</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-<section id="home">
-  <h2>Bem-vindo!</h2>
-  <p>Slogan ou promoção em destaque.</p>
-  <a href="#produtos" class="btn">Ver Produtos</a>
-  <a href="#servicos" class="btn">Ver Serviços</a>
-  <a href="https://wa.me/244947116658" class="btn">Fale Connosco no WhatsApp</a>
-</section>
+  <section id="produtos">
+    <h2>Produtos em Destaque</h2>
+    <div class="card">
+      <h3>Lata de Salsicha Frankfurt (50 unidades)</h3>
+      <p>Preço: 8.000 KZ</p>
+      <p>Produto em stock. Envio para todo o país.</p>
+      <a class="btn" href="https://wa.me/244947116658">Encomendar pelo WhatsApp</a>
+    </div>
+  </section>
 
-<section id="contato">
-  <h2>Fale Connosco</h2>
-  <form action="https://formspree.io/f/{teucódigo}" method="POST">
-    <input type="text" name="nome" placeholder="Seu nome" required />
-    <input type="email" name="email" placeholder="Seu email" required />
-    <textarea name="mensagem" placeholder="Escreva sua mensagem..." rows="5" required></textarea>
-    <button type="submit" class="btn">Enviar</button>
-  </form>
-</section>
+  <section id="servicos">
+    <h2>Serviços Disponíveis</h2>
+    <div class="card">
+      <h3>Consultoria Comercial</h3>
+      <p>Organizamos e divulgamos os seus produtos com estratégia e inovação.</p>
+    </div>
+    <div class="card">
+      <h3>Distribuição Local</h3>
+      <p>Entregas rápidas e seguras dentro de Angola.</p>
+    </div>
+  </section>
 
-<footer>
-  <p>&copy; 2025 Patrícia Pattas. Todos os direitos reservados.</p>
-</footer>
+  <section id="contacto">
+    <h2>Fale Connosco</h2>
+    <div class="card">
+      <p><strong>Telefone:</strong> +244 947 116 658</p>
+      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1BoyA2k81U/" target="_blank">Patrícia Pattas</a></p>
+      <p><strong>Email:</strong> pattasvendas@gmail.com</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Patrícia Pattas Vendas e Serviços – Todos os direitos reservados.
+  </footer>
 
 </body>
 </html>
