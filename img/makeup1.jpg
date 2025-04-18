@@ -3,7 +3,7 @@
   <h2>Galeria de Trabalhos</h2>
   <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
     
-    <!-- Maquiagem Profissional -->
+    <img src="makeup1.jpg" alt="Maquiagem Profissional" />
     <div style="max-width: 300px;">
       <img src="https://cdn.pixabay.com/photo/2020/02/11/16/24/makeup-4840502_1280.jpg" alt="Maquiagem Profissional" style="width: 100%; border-radius: 12px;">
       <p style="text-align: center;">Makeup Profissional</p>
@@ -14,7 +14,8 @@
       <img src="https://cdn.pixabay.com/photo/2017/06/23/22/16/crochet-2439890_1280.jpg" alt="Crochê Artesanal" style="width: 100%; border-radius: 12px;">
       <p style="text-align: center;">Crochê Artesanal</p>
     </div>
-
+<img src="https://images.unsplash.com/photo-1619983081563-430f5bb9a0e5?auto=format&fit=crop&w=600&q=80" alt="Maquiagem Profissional" />
+<img src="https://images.unsplash.com/photo-1586034679970-05e1273bfc94?auto=format&fit=crop&w=600&q=80" alt="Crochê Artesanal" />
     <!-- Exemplo Extra: Kit de Maquiagem -->
     <div style="max-width: 300px;">
       <img src="https://cdn.pixabay.com/photo/2014/12/22/12/35/makeup-576201_1280.jpg" alt="Kit de Maquiagem" style="width: 100%; border-radius: 12px;">
