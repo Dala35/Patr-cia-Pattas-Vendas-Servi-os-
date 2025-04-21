@@ -1,3 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patrícia Pattas – Vendas e Serviços</title>
+  <style>
+    :root {
+      --roxo: #6a0dad;
+      --lilas: #d8b4f8;
+      --amarelo: #f9dc5c;
+      --fundo: #f4f1fa;
+      --texto: #2e2e2e;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: var(--fundo);
+      color: var(--texto);
+    }
+
+    header {
+      background: var(--roxo);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: var(--lilas);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+    }
+
+    nav a {
+      color: var(--roxo);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--amarelo);
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    h2 {
+      color: var(--roxo);
+    }
+
+    .card, .produto, .servico {
+      background: white;
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(106, 13, 173, 0.1);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--amarelo);
+      color: var(--roxo);
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    input, select {
+      padding: 8px;
+      margin-top: 5px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: var(--roxo);
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
 .catalogo-produto {
   padding: 2em;
   background-color: #f9f9f9;
