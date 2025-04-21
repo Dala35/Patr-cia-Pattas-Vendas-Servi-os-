@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Patrícia Pattas Vendas e Serviços</title>
+  <title>Patrícia Pattas – Vendas e Serviços</title>
   <style>
     :root {
       --roxo: #6a0dad;
@@ -54,7 +54,7 @@
       color: var(--roxo);
     }
 
-    .card {
+    .card, .produto, .servico {
       background: white;
       padding: 20px;
       margin: 15px auto;
@@ -74,6 +74,13 @@
       margin-top: 10px;
     }
 
+    input, select {
+      padding: 8px;
+      margin-top: 5px;
+      width: 100%;
+      max-width: 300px;
+    }
+
     footer {
       text-align: center;
       padding: 15px;
@@ -86,120 +93,127 @@
 <body>
 
   <header>
-</body>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Patrícia Pattas – Vendas e Serviços</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 20px; padding: 0; }
-    header, footer { background-color: #f2f2f2; padding: 10px; text-align: center; }
-    nav { text-align: center; margin: 20px 0; }
-    nav a { margin: 0 15px; text-decoration: none; color: #444; font-weight: bold; }
-    section { margin-bottom: 40px; }
-    .produto, .servico, .card { border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 8px; }
-    .btn { display: inline-block; background-color: #4CAF50; color: white; padding: 10px 20px; border: none; text-decoration: none; border-radius: 5px; }
-    input, select { padding: 5px; margin-top: 5px; }
-  </style>
-</head>
-<body><header>
-  <h1>Patrícia Pattas</h1>
-  <p>Vendas e Serviços com elegância e confiança</p  </><nav>
-  <a href="#produtos">Produtos</a>
-  <a href="#servicos">Serviços</a>
-  <a href="#carrinho">Carrinho</a>
-  <a href="#contacto">Contacto</a>
-</nav><section id="produtos">
-  <h2>Produtos em Destaque</h2>
-  <div class="produto">
-    <h3>Lata de Salsicha Frankfurt (50 unidades)</h3>
-    <p><strong>Preço:</strong> 8.000 KZ</p>
-    <p>Produto em stock. Envio para todo o país.</p>
-    <a class="btn" href="https://wa.me/244926837464?text=Olá!%20Gostaria%20de%20comprar%20a%20Lata%20de%20Salsicha%20Frankfurt%20(50%20unidades).">Adicionar ao Carrinho</a>
-  </div>
-</section><section id="servicos">
-  <h2>Serviços Disponíveis</h2>
-  <div class="servico">
-    <h3>Consultoria Comercial</h3>
-    <p>Organizamos e divulgamos os seus produtos com estratégia e inovação.</p>
-  </div>
-  <div class="servico">
-    <h3>Distribuição Local</h3>
-    <p>Entregas rápidas e seguras dentro de Angola.</p>
-  </div>
-  <div class="servico">
-    <h3>Maquiagem Profissional</h3>
-    <p>Beleza com produtos de qualidade e profissionais experientes.</p>
-    <a class="btn" href="#maquiagem">Maquiagem</a>
-  </div>
-  <div class="servico">
-    <h3>Peças de Crochê</h3>
-    <p>Moda artesanal feita à mão com muito carinho.</p>
-    <a class="btn" href="#">Crochê</a>
-  </div>
-</section><section id="maquiagem">
-  <h2>Maquiagem ao Domicílio</h2>
-  <p><strong>Clientes da cidade:</strong> Preço varia de 22.000 à 35.000 KZ</p>
-  <p><strong>Clientes de Nova Vida, Talatona, Benfica, Kilamba:</strong> Preço 35.000 KZ</p>
-  <p><strong>Regras de Agendamento:</strong><br>
-    - Agendar com pelo menos 3 dias de antecedência<br>
-    - Pagamento de 50% para confirmação<br>
-    - Não marcar se não tiver certeza do horário
-  </p>
-  <p><strong>Horários disponíveis:</strong> 9-10, 12-13, 14-15, 16-17, 18-19h (Terça a Sábado)</p>
-  <p><strong>Métodos de pagamento:</strong> Multicaixa Express, Transferência (IBAN sob consulta)</p>  <div class="card">
-    <h3>Agendar - Cidade de Luanda</h3>
-    <label>Data:</label><br>
-    <input type="date" id="dataLuanda"><br><br>
-    <label>Horário:</label><br>
-    <select id="horaLuanda">
-      <option value="9-10">9h - 10h</option>
-      <option value="12-13">12h - 13h</option>
-      <option value="14-15">14h - 15h</option>
-      <option value="16-17">16h - 17h</option>
-      <option value="18-19">18h - 19h</option>
-    </select><br><br>
-    <a class="btn" href="#" id="btnLuanda" target="_blank">Agendar pelo WhatsApp</a>
-  </div>  <div class="card">
-    <h3>Agendar - Nova Vida, Talatona, Benfica, Kilamba</h3>
-    <label>Data:</label><br>
-    <input type="date" id="dataZona"><br><br>
-    <label>Horário:</label><br>
-    <select id="horaZona">
-      <option value="9-10">9h - 10h</option>
-      <option value="12-13">12h - 13h</option>
-      <option value="14-15">14h - 15h</option>
-      <option value="16-17">16h - 17h</option>
-      <option value="18-19">18h - 19h</option>
-    </select><br><br>
-    <a class="btn" href="#" id="btnZona" target="_blank">Agendar pelo WhatsApp</a>
-  </div>
-</section><section id="carrinho">
-  <h2>Seu Carrinho</h2>
-  <p><strong>Total:</strong> 0 KZ</p>
-  <a class="btn" href="https://wa.me/244926837464?text=Olá!%20Gostaria%20de%20finalizar%20minha%20compra.">Finalizar Compra no WhatsApp</a>
-</section><section id="contacto">
-  <h2>Fale Connosco</h2>
-  <p><strong>Telefone:</strong> +244 926 837 464</p>
-  <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1BoyA2k81U/">Patrícia Pattas</a></p>
-  <p><strong>Email:</strong> pattasvendas@gmail.com</p>
-</section><footer>
-  <p>© 2025 Patrícia Pattas Vendas e Serviços – Todos os direitos reservados.</p>
-</footer><script>
-  document.getElementById('btnLuanda').onclick = function() {
-    const data = document.getElementById('dataLuanda').value;
-    const hora = document.getElementById('horaLuanda').value;
-    const mensagem = `Olá, gostaria de agendar maquiagem ao domicílio (Luanda) para o dia ${data} às ${hora}. Já estou ciente das regras e farei o pagamento de 50%.`;
-    const url = "https://wa.me/244926837464?text=" + encodeURIComponent(mensagem);
-    this.href = url;
-  }
+    <h1>Patrícia Pattas</h1>
+    <p>Vendas e Serviços com elegância e confiança</p>
+  </header>
 
-  document.getElementById('btnZona').onclick = function() {
-    const data = document.getElementById('dataZona').value;
-    const hora = document.getElementById('horaZona').value;
-    const mensagem = `Olá, gostaria de agendar maquiagem ao domicílio (Nova Vida/Talatona/Benfica/Kilamba) para o dia ${data} às ${hora}. Já estou ciente das regras e farei o pagamento de 50%.`;
-    const url = "https://wa.me/244926837464?text=" + encodeURIComponent(mensagem);
-    this.href = url;
-  }
-</script></body>
+  <nav>
+    <a href="#produtos">Produtos</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#carrinho">Carrinho</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="produtos">
+    <h2>Produtos em Destaque</h2>
+    <div class="produto">
+      <h3>Lata de Salsicha Frankfurt (50 unidades)</h3>
+      <p><strong>Preço:</strong> 8.000 KZ</p>
+      <p>Produto em stock. Envio para todo o país.</p>
+      <a class="btn" href="https://wa.me/244926837464?text=Olá!%20Gostaria%20de%20comprar%20a%20Lata%20de%20Salsicha%20Frankfurt%20(50%20unidades).">Adicionar ao Carrinho</a>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <h2>Serviços Disponíveis</h2>
+
+    <div class="servico">
+      <h3>Consultoria Comercial</h3>
+      <p>Organizamos e divulgamos os seus produtos com estratégia e inovação.</p>
+    </div>
+
+    <div class="servico">
+      <h3>Distribuição Local</h3>
+      <p>Entregas rápidas e seguras dentro de Angola.</p>
+    </div>
+
+    <div class="servico">
+      <h3>Maquiagem Profissional</h3>
+      <p>Beleza com produtos de qualidade e profissionais experientes.</p>
+      <a class="btn" href="#maquiagem">Maquiagem</a>
+    </div>
+
+    <div class="servico">
+      <h3>Peças de Crochê</h3>
+      <p>Moda artesanal feita à mão com muito carinho.</p>
+      <a class="btn" href="#">Crochê</a>
+    </div>
+  </section>
+
+  <section id="maquiagem">
+    <h2>Maquiagem ao Domicílio</h2>
+    <p><strong>Clientes da cidade:</strong> Preço varia de 22.000 à 35.000 KZ</p>
+    <p><strong>Clientes de Nova Vida, Talatona, Benfica, Kilamba:</strong> Preço 35.000 KZ</p>
+    <p><strong>Regras de Agendamento:</strong><br>
+      - Agendar com pelo menos 3 dias de antecedência<br>
+      - Pagamento de 50% para confirmação<br>
+      - Não marcar se não tiver certeza do horário
+    </p>
+    <p><strong>Horários disponíveis:</strong> 9-10, 12-13, 14-15, 16-17, 18-19h (Terça a Sábado)</p>
+    <p><strong>Métodos de pagamento:</strong> Multicaixa Express, Transferência (IBAN sob consulta)</p>
+
+    <div class="card">
+      <h3>Agendar - Cidade de Luanda</h3>
+      <label>Data:</label><br>
+      <input type="date" id="dataLuanda"><br><br>
+      <label>Horário:</label><br>
+      <select id="horaLuanda">
+        <option value="9-10">9h - 10h</option>
+        <option value="12-13">12h - 13h</option>
+        <option value="14-15">14h - 15h</option>
+        <option value="16-17">16h - 17h</option>
+        <option value="18-19">18h - 19h</option>
+      </select><br><br>
+      <a class="btn" href="#" id="btnLuanda" target="_blank">Agendar pelo WhatsApp</a>
+    </div>
+
+    <div class="card">
+      <h3>Agendar - Nova Vida, Talatona, Benfica, Kilamba</h3>
+      <label>Data:</label><br>
+      <input type="date" id="dataZona"><br><br>
+      <label>Horário:</label><br>
+      <select id="horaZona">
+        <option value="9-10">9h - 10h</option>
+        <option value="12-13">12h - 13h</option>
+        <option value="14-15">14h - 15h</option>
+        <option value="16-17">16h - 17h</option>
+        <option value="18-19">18h - 19h</option>
+      </select><br><br>
+      <a class="btn" href="#" id="btnZona" target="_blank">Agendar pelo WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="carrinho">
+    <h2>Seu Carrinho</h2>
+    <p><strong>Total:</strong> 0 KZ</p>
+    <a class="btn" href="https://wa.me/244926837464?text=Olá!%20Gostaria%20de%20finalizar%20minha%20compra.">Finalizar Compra no WhatsApp</a>
+  </section>
+
+  <section id="contacto">
+    <h2>Fale Connosco</h2>
+    <p><strong>Telefone:</strong> +244 926 837 464</p>
+    <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1BoyA2k81U/" target="_blank">Patrícia Pattas</a></p>
+    <p><strong>Email:</strong> pattasvendas@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Patrícia Pattas Vendas e Serviços – Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('btnLuanda').onclick = function() {
+      const data = document.getElementById('dataLuanda').value;
+      const hora = document.getElementById('horaLuanda').value;
+      const mensagem = `Olá, gostaria de agendar maquiagem ao domicílio (Luanda) para o dia ${data} às ${hora}. Já estou ciente das regras e farei o pagamento de 50%.`;
+      this.href = `https://wa.me/244926837464?text=${encodeURIComponent(mensagem)}`;
+    };
+
+    document.getElementById('btnZona').onclick = function() {
+      const data = document.getElementById('dataZona').value;
+      const hora = document.getElementById('horaZona').value;
+      const mensagem = `Olá, gostaria de agendar maquiagem ao domicílio (Nova Vida/Talatona/Benfica/Kilamba) para o dia ${data} às ${hora}. Já estou ciente das regras e farei o pagamento de 50%.`;
+      this.href = `https://wa.me/244926837464?text=${encodeURIComponent(mensagem)}`;
+    };
+  </script>
+</body>
 </html>
