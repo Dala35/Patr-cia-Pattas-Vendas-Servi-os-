@@ -1,1 +1,26 @@
+.catalogo-produto {
+  padding: 2em;
+  background-color: #f9f9f9;
+}
 
+.catalogo-produto h2 {
+  color: #c70039;
+  margin-bottom: 1em;
+}
+
+.produto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: center;
+}
+
+.produto img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.produto .info {
+  flex: 1;
+  min-width: 250px;
+}
