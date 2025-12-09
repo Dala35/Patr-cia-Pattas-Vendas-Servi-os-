@@ -357,35 +357,7 @@
     
     // ATENÇÃO: PARA USAR FORA DO CANVAS, VOCÊ DEVE PREENCHER SUA CHAVE AQUI.
     // EM PRODUÇÃO, ESTA CHAVE DEVE SER CHAMADA DE UM SERVIDOR SEGURO (BACK-END).
-    const apiKey = ""; // curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-preview:generateContent" \
-  -H "x-goog-api-key: $GEMINI_API_KEY" \AIzaSyBzWNk7WgAfgufx0ltlq4fjddk3iIWPcas'
-  -H 'Content-Type: application/json' \
-  -X POST \
-  -d '{
-    "contents": [{
-      "parts": [{"text": "Search for all details for the latest Euro."}]
-    }],
-    "tools": [
-      {"googleSearch": {}},
-      {"urlContext": {}}
-    ],
-    "generationConfig": {
-        "responseMimeType": "application/json",
-        "responseJsonSchema": {
-            "type": "object",
-            "properties": {
-                "winner": {"type": "string", "description": "The name of the winner."},
-                "final_match_score": {"type": "string", "description": "The final score."},
-                "scorers": {
-                    "type": "array",
-                    "items": {"type": "string"},
-                    "description": "The name of the scorer."
-                }
-            },
-            "required": ["winner", "final_match_score", "scorers"]
-        }
-    }
-  }'
+    const apiKey = "";AIzaSyBzWNk7WgAfgufx0ltlq4fjddk3iIWPcas
     const model = "gemini-2.5-flash-preview-09-2025";
     const WHATSAPP_NUMBER = "244926837464";
 
