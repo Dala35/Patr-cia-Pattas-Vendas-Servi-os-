@@ -580,7 +580,64 @@
   
     // --- 3. CHATBOT LOGIC (GEMINI API) ---
     const GEMINI_API_KEY = "";
-    const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent";
+    const GEMINI_API_URl="https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-preview:generateContent" \
+
+  -H "x-goog-api-key: $GEMINI_API_KEY" \
+
+  -H 'Content-Type: application/json' \
+
+  -X POST \
+
+  -d '{
+
+    "contents": [{
+
+      "parts": [{"text": "Search for all details for the latest Euro."}]
+
+    }],
+
+    "tools": [
+
+      {"googleSearch": {}},
+
+      {"urlContext": {}}
+
+    ],
+
+    "generationConfig": {
+
+        "responseMimeType": "application/json",
+
+        "responseJsonSchema": {
+
+            "type": "object",
+
+            "properties": {
+
+                "winner": {"type": "string", "description": "The name of the winner."},
+
+                "final_match_score": {"type": "string", "description": "The final score."},
+
+                "scorers": {
+
+                    "type": "array",
+
+                    "items": {"type": "string"},
+
+                    "description": "The name of the scorer."
+
+                }
+
+            },
+
+            "required": ["winner", "final_match_score", "scorers"]
+
+        }
+
+    }
+
+  }'
+
   
     let chatHistory = [];
     const chatbotContent = document.getElementById('chatbot-content');
