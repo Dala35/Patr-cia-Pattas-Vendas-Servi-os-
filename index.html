@@ -14,11 +14,11 @@
       theme: {
         extend: {
           colors: {
-            'custom-roxo': '#6a0dad', // Seu --roxo (Roxo de Patrícia)
-            'custom-lilas': '#d8b4f8', // Seu --lilas
-            'custom-amarelo': '#f9dc5c', // Seu --amarelo (Ação/Destaque)
-            'custom-fundo': '#f4f1fa', // Seu --fundo
-            'custom-texto': '#2e2e2e', // Seu --texto
+            'custom-roxo': '#6a0dad', // Roxo de Patrícia
+            'custom-lilas': '#d8b4f8', 
+            'custom-amarelo': '#f9dc5c', // Ação/Destaque
+            'custom-fundo': '#f4f1fa', 
+            'custom-texto': '#2e2e2e', 
           },
         },
       },
@@ -63,17 +63,37 @@
   </nav>
   
   <!-- Products Section -->
-  <section id="galeria">
-  <h2>Galeria de Trabalhos</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-    
-    <img src="makeup1.jpg" alt="Maquiagem Profissional" />
-    <div style="max-width: 300px;">
-      <img src="https://cdn.pixabay.com/photo/2020/02/11/16/24/makeup-4840502_1280.jpg" alt="Maquiagem Profissional" style="width: 100%; border-radius: 12px;">
-      <p style="text-align: center;">Makeup Profissional</p>
-    </div>
+  <section id="galeria" class="p-6 md:p-10 container mx-auto">
+    <h2 class="text-3xl font-bold text-custom-roxo mb-8 text-center">Galeria de Trabalhos</h2>
+    <div class="flex flex-wrap gap-5 justify-center">
+      
+      <!-- Crochê Artesanal -->
+      <div class="max-w-[calc(50%-10px)] sm:max-w-[300px] bg-white rounded-xl shadow-lg overflow-hidden">
+        <!-- Placeholder Image com Patas, já que o nome é Pattas -->
+        <img src="https://placehold.co/600x400/d8b4f8/6a0dad?text=Crochê+by+Pattas" alt="Crochê Artesanal" class="w-full h-auto object-cover aspect-[4/3] transform hover:scale-105 transition duration-500">
+        <p class="text-center py-2 text-custom-texto font-medium">Crochê Artesanal</p>
+      </div>
 
-   
+      <!-- Maquiagem Profissional -->
+      <div class="max-w-[calc(50%-10px)] sm:max-w-[300px] bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://placehold.co/600x400/6a0dad/ffffff?text=Makeup+by+Patrícia" alt="Maquiagem Profissional" class="w-full h-auto object-cover aspect-[4/3] transform hover:scale-105 transition duration-500">
+        <p class="text-center py-2 text-custom-texto font-medium">Makeup Profissional</p>
+      </div>
+
+      <!-- Kit de Maquiagem -->
+      <div class="max-w-[calc(50%-10px)] sm:max-w-[300px] bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://placehold.co/600x400/f9dc5c/6a0dad?text=Kit+Maquiagem" alt="Kit de Maquiagem" class="w-full h-auto object-cover aspect-[4/3] transform hover:scale-105 transition duration-500">
+        <p class="text-center py-2 text-custom-texto font-medium">Kit de Maquiagem Profissional</p>
+      </div>
+
+      <!-- Produtos de Crochê -->
+      <div class="max-w-[calc(50%-10px)] sm:max-w-[300px] bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://placehold.co/600x400/d8b4f8/6a0dad?text=Moda+Crochê" alt="Produtos de Crochê" class="w-full h-auto object-cover aspect-[4/3] transform hover:scale-105 transition duration-500">
+        <p class="text-center py-2 text-custom-texto font-medium">Produtos Feitos em Crochê</p>
+      </div>
+    </div>
+  </section>
+
   <section id="produtos" class="p-6 md:p-10 container mx-auto">
     <h2 class="text-3xl font-bold text-custom-roxo mb-8 text-center">Nossos Produtos de Crochê</h2>
   
@@ -196,15 +216,15 @@
     </div>
   </section>
   
-  <!-- Cart Section -->
+  <!-- Cart Section (Auth removed for external use simplification) -->
   <section id="carrinho" class="p-6 md:p-10 container mx-auto text-center">
     <div class="bg-white p-8 rounded-xl shadow-xl max-w-lg mx-auto border-t-8 border-custom-amarelo">
-        <h2 class="text-3xl font-bold text-custom-roxo mb-4">Seu Carrinho (<span id="user-id-display" class="text-sm font-normal text-gray-500">A carregar...</span>)</h2>
+        <h2 class="text-3xl font-bold text-custom-roxo mb-4">Seu Carrinho</h2>
         
         <!-- Lista de Itens do Carrinho -->
         <div id="cart-list" class="my-6 text-left space-y-3 min-h-[100px]">
             <!-- Itens serão renderizados aqui pelo JS -->
-            <p class="text-gray-500 italic">A carregar itens...</p>
+            <p class="text-gray-500 italic">Seu carrinho está vazio.</p>
         </div>
   
         <p class="text-3xl mb-6 font-extrabold text-custom-roxo">
@@ -262,10 +282,10 @@
   
         <!-- Chat Content/Messages -->
         <div id="chatbot-content" class="flex-grow p-4 overflow-y-auto space-y-4">
-            <!-- Messages go here -->
+            <!-- Mensagem de Boas-vindas da IA -->
             <div class="flex justify-start">
-                <div class="max-w-xs lg:max-w-md bg-gray-200 text-custom-texto rounded-tl-xl p-3 rounded-bl-xl rounded-br-xl shadow-md text-sm">
-                    A carregar assistente...
+                <div class="max-w-[85%] bg-custom-lilas text-custom-texto rounded-tl-xl p-3 rounded-bl-xl rounded-br-xl shadow-md text-sm">
+                    Olá! Sou o Assistente Patrícia Pattas. Estou aqui para responder às suas perguntas sobre nossos produtos de crochê, serviços e agendamentos de maquiagem. Como posso ajudar você hoje?
                 </div>
             </div>
         </div>
@@ -284,6 +304,15 @@
             </button>
         </div>
     </div>
+  </div>
+  
+  <!-- Custom Modal for Errors (Replaces alert()) -->
+  <div id="error-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center p-4 z-[100]">
+      <div class="bg-white p-6 rounded-xl shadow-2xl max-w-md w-full border-t-8 border-red-500">
+          <h3 class="text-xl font-bold text-red-600 mb-4">Aviso Crítico</h3>
+          <p id="error-message" class="text-gray-700"></p>
+          <button onclick="document.getElementById('error-modal').classList.add('hidden')" class="mt-4 w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition">Entendi</button>
+      </div>
   </div>
   
   <!-- Estilos Adicionais -->
@@ -320,453 +349,385 @@
     }
   </style>
   
-  <!-- JavaScript Module for Firebase, Cart, Menu, and Chatbot -->
+  <!-- JavaScript Module for Site Logic and Chatbot -->
   <script type="module">
-    // --- Firebase Global Variables (MANDATORY) ---
-    const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-    const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
-    const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
-  
-    // --- Firebase Imports ---
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-    import { getAuth, signInWithCustomToken, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-    import { getFirestore, doc, collection, onSnapshot, updateDoc, deleteDoc, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-    import { setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-  
-    setLogLevel('debug'); // Ativar logs do Firestore
-  
-    let db, auth;
-    let userId = null;
-    let cartItems = [];
-    const WAMESSAGE = "244926837464"; // Número de WhatsApp da Patrícia
-    const CURRENCY_FORMAT = new Intl.NumberFormat('pt-AO', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-  
-    // --- 1. FIREBASE SETUP & CART LOGIC ---
-  
-    async function setupFirebase() {
-        try {
-            const app = initializeApp(firebaseConfig);
-            db = getFirestore(app);
-            auth = getAuth(app);
-  
-            // Tenta autenticar com token ou anonimamente
-            const signInPromise = initialAuthToken
-                ? signInWithCustomToken(auth, initialAuthToken)
-                : signInAnonymously(auth);
-            
-            await signInPromise.catch(error => {
-                console.error("Falha na autenticação inicial:", error);
-                // Permite continuar anonimamente se o token falhar
-            });
-            
-            // Listener de estado de autenticação
-            onAuthStateChanged(auth, (user) => {
-                if (user) {
-                    userId = user.uid;
-                    // Exibe o ID do usuário para fins de rastreamento/debug (MANDATÓRIO)
-                    document.getElementById('user-id-display').textContent = `ID: ${userId}`;
-                    loadCartItems();
-                } else {
-                    // Fallback se o user for nulo (embora a autenticação anônima deva retornar um user)
-                    userId = crypto.randomUUID(); 
-                    document.getElementById('user-id-display').textContent = `ID: ${userId} (Anônimo - Fallback)`;
-                    loadCartItems(); // Tenta carregar mesmo no fallback
-                }
-            });
-  
-        } catch (error) {
-            console.error("Falha na inicialização do Firebase:", error);
-            document.getElementById('cart-list').innerHTML = '<p class="text-red-500">Erro ao inicializar o banco de dados. Tente recarregar.</p>';
-        }
-    }
-  
-    function getCartCollectionRef() {
-        if (!db || !userId) return null;
-        // Caminho: /artifacts/{appId}/users/{userId}/cartItems (Private Data)
-        return collection(db, `artifacts/${appId}/users/${userId}/cartItems`);
-    }
-  
-    // Renderiza o Carrinho na UI
-    function renderCart() {
-        const cartList = document.getElementById('cart-list');
-        const cartTotalElement = document.getElementById('cart-total');
-        const finalCartMessageElement = document.getElementById('btn-finalizar-compra');
-        
-        // Limpa o conteúdo e remove qualquer indicador de carregamento
-        cartList.innerHTML = '';
-        
-        if (!cartList || !cartTotalElement || !finalCartMessageElement) return;
-  
-        let total = 0;
-        let waItems = "Pedido:\n"; // Mensagem para o WhatsApp
-  
-        if (cartItems.length === 0) {
-            cartList.innerHTML = '<p class="text-gray-500 italic">O seu carrinho está vazio. Adicione alguns produtos!</p>';
-            cartTotalElement.textContent = '0';
-            finalCartMessageElement.disabled = true;
-            finalCartMessageElement.href = `https://wa.me/${WAMESSAGE}?text=Ol%C3%A1!%20Gostaria%20de%20finalizar%20minha%20compra.%20(Carrinho%20vazio)`;
-            return;
-        }
-  
-        cartItems.forEach(item => {
-            const itemTotal = item.price * item.quantity;
-            total += itemTotal;
-            waItems += `- ${item.name} (${item.quantity}x) | ${CURRENCY_FORMAT.format(itemTotal)} KZ\n`;
-  
-            const itemElement = document.createElement('div');
-            itemElement.className = 'flex justify-between items-center bg-gray-50 p-3 rounded-lg shadow-sm mb-2';
-            itemElement.innerHTML = `
-                <div>
-                    <p class="font-semibold text-custom-roxo">${item.name}</p>
-                    <p class="text-sm text-gray-600">${item.quantity} x ${CURRENCY_FORMAT.format(item.price)} KZ</p>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <button data-id="${item.id}" data-action="decrease" class="text-xl font-bold text-custom-roxo hover:text-custom-amarelo transition">-</button>
-                    <span class="font-bold w-4 text-center">${item.quantity}</span>
-                    <button data-id="${item.id}" data-action="increase" class="text-xl font-bold text-custom-roxo hover:text-custom-amarelo transition">+</button>
-                    <button data-id="${item.id}" data-action="remove" class="text-red-500 hover:text-red-700 transition ml-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
-                    </button>
-                </div>
-            `;
-            cartList.appendChild(itemElement);
-        });
-  
-        cartTotalElement.textContent = CURRENCY_FORMAT.format(total);
-        finalCartMessageElement.disabled = false;
-  
-        const waText = `Olá Patrícia! Gostaria de finalizar minha compra:\n${waItems}\n*Total: ${CURRENCY_FORMAT.format(total)} KZ*\n\nAguardando instruções para pagamento.`;
-        finalCartMessageElement.href = `https://wa.me/${WAMESSAGE}?text=${encodeURIComponent(waText)}`;
-  
-        // Reatribuir listeners para botões de quantidade/remoção (Importante pois o HTML é recriado)
-        cartList.querySelectorAll('button[data-action]').forEach(button => {
-            button.addEventListener('click', handleCartAction);
-        });
-    }
-  
-    // Carrega e ouve por mudanças no carrinho via onSnapshot
-    function loadCartItems() {
-        const cartRef = getCartCollectionRef();
-        if (!cartRef) {
-             // Se não houver db ou userId, apenas mostra o estado inicial de carregamento/erro
-            document.getElementById('cart-list').innerHTML = '<p class="text-gray-500 italic">Aguardando autenticação...</p>';
-            return;
-        }
-  
-        // Inicia o listener em tempo real
-        onSnapshot(cartRef, (snapshot) => {
-            const items = [];
-            snapshot.forEach(doc => {
-                const data = doc.data();
-                // O doc.id é usado como o ID primário do item do carrinho no Firestore
-                items.push({ id: doc.id, ...data });
-            });
-            cartItems = items;
-            renderCart();
-        }, (error) => {
-            console.error("Erro ao ouvir itens do carrinho:", error);
-            document.getElementById('cart-list').innerHTML = '<p class="text-red-500">Erro ao carregar o carrinho em tempo real. Tente novamente.</p>';
-        });
-    }
-  
-    async function addToCart(productId, name, price) {
-        if (!userId) return console.error("Usuário não autenticado ou carregando.");
-        const cartRef = getCartCollectionRef();
-        if (!cartRef) return;
-        
-        // Bloquear botão e dar feedback visual
-        const btn = event.currentTarget;
-        btn.disabled = true;
-        btn.textContent = 'Adicionando...';
-  
-        try {
-            // Verifica se o item já existe no cache local
-            const existingItem = cartItems.find(item => item.productId === productId);
-  
-            if (existingItem) {
-                const itemDocRef = doc(db, cartRef.path, existingItem.id);
-                // Aumenta a quantidade
-                await updateDoc(itemDocRef, { quantity: existingItem.quantity + 1 });
-            } else {
-                // Adiciona novo item
-                await addDoc(cartRef, {
-                    productId,
-                    name,
-                    price: Number(price),
-                    quantity: 1,
-                    createdAt: new Date()
-                });
-            }
-        } catch (e) {
-            console.error("Erro ao adicionar ao carrinho:", e);
-            btn.textContent = 'Erro!';
-        } finally {
-            setTimeout(() => {
-                btn.disabled = false;
-                btn.textContent = 'Adicionar ao Carrinho';
-            }, 1000);
-        }
-    }
-  
-    async function handleCartAction(event) {
-        const button = event.currentTarget;
-        const itemId = button.getAttribute('data-id');
-        const action = button.getAttribute('data-action');
-        const item = cartItems.find(i => i.id === itemId);
-  
-        if (!item || !userId) return;
-  
-        const cartRef = getCartCollectionRef();
-        const itemDocRef = doc(db, cartRef.path, itemId);
-  
-        try {
-            if (action === 'increase') {
-                await updateDoc(itemDocRef, { quantity: item.quantity + 1 });
-            } else if (action === 'decrease') {
-                if (item.quantity > 1) {
-                    await updateDoc(itemDocRef, { quantity: item.quantity - 1 });
-                } else {
-                    // Remove o item se a quantidade for 1
-                    await deleteDoc(itemDocRef);
-                }
-            } else if (action === 'remove') {
-                await deleteDoc(itemDocRef);
-            }
-        } catch (e) {
-            console.error("Erro ao realizar ação no carrinho:", e);
-        }
-    }
+    // ==========================================================
+    // INÍCIO: CONFIGURAÇÃO DE AMBIENTE E API
+    // ==========================================================
     
-    // --- 2. MENU HAMBURGER LOGIC ---
-    document.getElementById('menu-button').addEventListener('click', () => {
-        const menu = document.getElementById('mobile-menu');
-        const openIcon = document.getElementById('menu-icon-open');
-        const closeIcon = document.getElementById('menu-icon-close');
-        
-        menu.classList.toggle('hidden');
-        openIcon.classList.toggle('hidden');
-        closeIcon.classList.toggle('hidden');
-    });
-  
-    // Fechar menu ao clicar em um link
-    document.querySelectorAll('.mobile-nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.add('hidden');
-            document.getElementById('menu-icon-open').classList.remove('hidden');
-            document.getElementById('menu-icon-close').classList.add('hidden');
-        });
-    });
-  
-    // --- 3. CHATBOT LOGIC (GEMINI API) ---
-    const GEMINI_API_KEY = "";
-    const GEMINI_API_URl="https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-preview:generateContent" \
+    // ATENÇÃO: PARA USAR FORA DO CANVAS, VOCÊ DEVE PREENCHER SUA CHAVE AQUI.
+    // EM PRODUÇÃO, ESTA CHAVE DEVE SER CHAMADA DE UM SERVIDOR SEGURO (BACK-END).
+    const apiKey = ""; // <--- COLOQUE SUA CHAVE AQUI!
+    const model = "gemini-2.5-flash-preview-09-2025";
+    const WHATSAPP_NUMBER = "244926837464";
 
-  -H "x-goog-api-key: $GEMINI_API_KEY" \
+    const SYSTEM_INSTRUCTION = `Você é o Assistente Virtual Patrícia Pattas. Seu objetivo é fornecer informações de forma elegante, confiante e concisa sobre os produtos (Crochê: Conjunto Praia, Vestido Praia, Bolsa Praia) e serviços (Consultoria Comercial, Distribuição, Maquiagem Profissional) oferecidos. Use o contexto da Pesquisa Google (Grounding) apenas para perguntas externas aos produtos da loja, respondendo o que for relevante para o negócio.
+    
+    Informações chave:
+    - Maquiagem ao Domicílio (Cidade): Preço varia de 22.000 à 35.000 KZ.
+    - Maquiagem ao Domicílio (Nova Vida, Talatona, Benfica, Kilamba): Preço 35.000 KZ.
+    - Agendamento: Pelo menos 3 dias de antecedência, pagamento de 50% para confirmar.
+    - Contacto WhatsApp para Compras/Agendamento: +244 926 837 464.
+    - Produtos de Crochê: Conjunto Crochê Praia (25.000 KZ), Vestido Praia Crochê (30.000 KZ), Bolsa de Praia Crochê (15.000 KZ).
+    
+    Responda sempre em Português e mantenha o foco em ajudar o cliente a comprar ou agendar.`;
 
-  -H 'Content-Type: application/json' \
-
-  -X POST \
-
-  -d '{
-
-    "contents": [{
-
-      "parts": [{"text": "Search for all details for the latest Euro."}]
-
-    }],
-
-    "tools": [
-
-      {"googleSearch": {}},
-
-      {"urlContext": {}}
-
-    ],
-
-    "generationConfig": {
-
-        "responseMimeType": "application/json",
-
-        "responseJsonSchema": {
-
-            "type": "object",
-
-            "properties": {
-
-                "winner": {"type": "string", "description": "The name of the winner."},
-
-                "final_match_score": {"type": "string", "description": "The final score."},
-
-                "scorers": {
-
-                    "type": "array",
-
-                    "items": {"type": "string"},
-
-                    "description": "The name of the scorer."
-
-                }
-
-            },
-
-            "required": ["winner", "final_match_score", "scorers"]
-
-        }
-
-    }
-
-  }'
-
-  
+    // Estado local para armazenar o histórico do chat
     let chatHistory = [];
+
+    // ==========================================================
+    // FIM: CONFIGURAÇÃO DE AMBIENTE E API
+    // ==========================================================
+
+
+    // --- Elementos DOM ---
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    const chatbotToggle = document.getElementById('chatbot-toggle-button');
+    const chatbotModal = document.getElementById('chatbot-modal');
+    const chatbotClose = document.getElementById('chatbot-close-button');
     const chatbotContent = document.getElementById('chatbot-content');
     const chatbotInput = document.getElementById('chatbot-input');
+    const chatbotSend = document.getElementById('chatbot-send');
     const chatbotLoading = document.getElementById('chatbot-loading');
-    const chatbotModal = document.getElementById('chatbot-modal');
+    const errorModal = document.getElementById('error-modal');
+    const errorMessage = document.getElementById('error-message');
     
-    // Toggle Chatbot Modal
-    document.getElementById('chatbot-toggle-button').addEventListener('click', () => {
-        chatbotModal.classList.toggle('hidden');
-        if (!chatbotModal.classList.contains('hidden') && chatHistory.length === 0) {
-            initChatbot();
+    // --- Variáveis do Carrinho (Simplificadas sem Firestore) ---
+    let cart = [];
+    const cartList = document.getElementById('cart-list');
+    const cartTotalDisplay = document.getElementById('cart-total');
+    const finalizeButton = document.getElementById('btn-finalizar-compra');
+
+    /**
+     * Exibe um modal customizado de erro (substituindo o alert()).
+     * @param {string} message Mensagem de erro a ser exibida.
+     */
+    function showError(message) {
+        errorMessage.textContent = message;
+        errorModal.classList.remove('hidden');
+        errorModal.classList.add('flex');
+    }
+    
+    // ==========================================================
+    // LÓGICA DO CHATBOT (INTEGRAÇÃO GEMINI)
+    // ==========================================================
+
+    /**
+     * Renderiza uma mensagem no chat.
+     * @param {string} text O texto da mensagem.
+     * @param {string} sender O remetente ('user' ou 'ai').
+     * @param {Array<Object>} [sources=[]] Fontes de grounding (apenas para 'ai').
+     */
+    function renderMessage(text, sender, sources = []) {
+        const messageWrapper = document.createElement('div');
+        const messageBubble = document.createElement('div');
+        
+        // Define o alinhamento e as cores da bolha de chat
+        if (sender === 'user') {
+            messageWrapper.className = 'flex justify-end';
+            messageBubble.className = 'max-w-[85%] bg-custom-roxo text-white rounded-tr-xl p-3 rounded-bl-xl rounded-tl-xl shadow-md text-sm whitespace-pre-wrap';
+        } else {
+            messageWrapper.className = 'flex justify-start';
+            messageBubble.className = 'max-w-[85%] bg-custom-lilas text-custom-texto rounded-tl-xl p-3 rounded-bl-xl rounded-br-xl shadow-md text-sm whitespace-pre-wrap';
         }
-        // Rola para o final
-        chatbotContent.scrollTop = chatbotContent.scrollHeight;
-    });
-    document.getElementById('chatbot-close-button').addEventListener('click', () => {
-        chatbotModal.classList.add('hidden');
-    });
-  
-    function displayMessage(text, isUser) {
-        const msgDiv = document.createElement('div');
-        msgDiv.className = `flex mb-4 ${isUser ? 'justify-end' : 'justify-start'}`;
-        msgDiv.innerHTML = `
-            <div class="max-w-xs lg:max-w-md ${isUser ? 'bg-custom-roxo text-white rounded-tr-xl' : 'bg-gray-200 text-custom-texto rounded-tl-xl'} p-3 rounded-bl-xl rounded-br-xl shadow-md text-sm">
-                ${text.replace(/\n/g, '<br>')}
-            </div>
-        `;
-        chatbotContent.appendChild(msgDiv);
+
+        // Adiciona o texto da mensagem
+        messageBubble.textContent = text;
+        
+        // Adiciona as fontes de citação (se existirem)
+        if (sources && sources.length > 0) {
+            const sourcesDiv = document.createElement('div');
+            sourcesDiv.className = 'mt-2 pt-2 border-t border-gray-400 text-xs text-gray-700';
+            sourcesDiv.innerHTML = '<strong>Fontes:</strong><ul class="list-disc ml-4 space-y-0">';
+            sources.forEach(source => {
+                sourcesDiv.innerHTML += `<li><a href="${source.uri}" target="_blank" class="text-blue-700 hover:underline">${source.title}</a></li>`;
+            });
+            sourcesDiv.innerHTML += '</ul>';
+            messageBubble.appendChild(sourcesDiv);
+        }
+
+        messageWrapper.appendChild(messageBubble);
+        chatbotContent.appendChild(messageWrapper);
+        
+        // Mantém a rolagem no final da conversa
         chatbotContent.scrollTop = chatbotContent.scrollHeight;
     }
-  
-    async function sendMessage() {
-        const userMessage = chatbotInput.value.trim();
-        if (!userMessage) return;
-  
-        chatbotInput.value = '';
-        displayMessage(userMessage, true);
-        chatHistory.push({ role: "user", parts: [{ text: userMessage }] });
-        
-        chatbotLoading.classList.remove('hidden');
-        document.getElementById('chatbot-send').disabled = true;
-  
+
+    /**
+     * Chama a API do Gemini com Google Search Grounding e Exponential Backoff.
+     */
+    async function callGeminiApi(prompt, attempt = 0) {
+        const maxAttempts = 5;
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+
+        // Adiciona a nova mensagem do usuário ao histórico antes de enviar
+        const chatHistoryWithNewPrompt = [...chatHistory, { role: "user", parts: [{ text: prompt }] }];
+
         const payload = {
-            contents: chatHistory,
+            contents: chatHistoryWithNewPrompt,
             systemInstruction: {
-                parts: [{ text: "Você é Patrícia Pattas, uma vendedora e consultora de estilo em Angola. Sua loja vende roupas de crochê e oferece serviços de maquiagem e consultoria comercial. Responda de forma amigável, prestativa e profissional em Português, focando em moda, beleza e atendimento ao cliente. Use emojis moderadamente. Nunca mencione que você é um modelo de linguagem ou IA. As informações de contato são: WhatsApp 244926837464, Email pattasvendas@gmail.com. Não tente agendar; apenas direcione para o WhatsApp ou a seção de agendamento '#maquiagem'." }]
+                parts: [{ text: SYSTEM_INSTRUCTION }]
             },
+            // Ativa o Google Search Grounding
+            tools: [{ "google_search": {} }],
         };
-  
+
         try {
-            const response = await fetchWithRetry(GEMINI_API_URL + `?key=${GEMINI_API_KEY}`, {
+            const response = await fetch(apiUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             });
-  
-            const result = await response.json();
-            const modelResponse = result.candidates?.[0]?.content?.parts?.[0]?.text || "Desculpe, não consegui processar sua pergunta agora. 😔";
-  
-            chatHistory.push({ role: "model", parts: [{ text: modelResponse }] });
-            displayMessage(modelResponse, false);
-  
-        } catch (error) {
-            console.error("Erro da API Gemini:", error);
-            displayMessage("Opa! Tivemos um problema de comunicação. Por favor, tente novamente mais tarde. 🛠️", false);
-        } finally {
-            chatbotLoading.classList.add('hidden');
-            document.getElementById('chatbot-send').disabled = false;
-        }
-    }
-    
-    // Função utilitária para fetch com retentativa (Exponential Backoff)
-    async function fetchWithRetry(url, options, maxRetries = 3) {
-        for (let i = 0; i < maxRetries; i++) {
-            try {
-                const response = await fetch(url, options);
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                return response;
-            } catch (error) {
-                if (i === maxRetries - 1) throw error;
-                const delay = Math.pow(2, i) * 1000;
+
+            if (response.status === 429 && attempt < maxAttempts - 1) {
+                const delay = Math.pow(2, attempt) * 1000 + Math.random() * 1000;
                 await new Promise(resolve => setTimeout(resolve, delay));
+                return callGeminiApi(prompt, attempt + 1);
             }
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(`Erro na API: ${response.statusText} (${response.status}). Detalhes: ${errorData.error?.message || JSON.stringify(errorData)}`);
+            }
+
+            return await response.json();
+
+        } catch (error) {
+            console.error("Erro fatal durante a chamada da API:", error);
+            throw new Error(`Falha na comunicação com a IA: ${error.message}`);
         }
     }
-  
-    function initChatbot() {
-        const initialMsg = "Olá! Sou Patrícia Pattas, sua assistente virtual. Como posso te ajudar hoje com nossos produtos de crochê, agendamentos de maquiagem ou consultoria? 😊";
-        chatHistory.push({ role: "model", parts: [{ text: initialMsg }] });
-        // Limpa e exibe a mensagem inicial.
-        chatbotContent.innerHTML = '';
-        displayMessage(initialMsg, false);
-    }
-    document.getElementById('chatbot-send').addEventListener('click', sendMessage);
-  
-    // --- 4. REFINAMENTO DO AGENDAMENTO (WhatsApp Link Generation) ---
-  
-    function generateSchedulingLink(dataId, horaId, areaName) {
-        const dataInput = document.getElementById(dataId);
-        const horaSelect = document.getElementById(horaId);
-        const data = dataInput.value;
-        const hora = horaSelect.value;
-        const btn = event.currentTarget;
-        
-        // Remove mensagens de erro anteriores
-        btn.parentElement.querySelector('p.error-message')?.remove();
-        
-        if (!data) {
-            const errorMsg = document.createElement('p');
-            errorMsg.className = 'text-red-700 text-sm mt-2 font-bold error-message';
-            errorMsg.textContent = '⚠️ Por favor, selecione uma data para agendar.';
-            // Insere a mensagem de erro antes do botão
-            btn.parentElement.insertBefore(errorMsg, btn);
-            event.preventDefault(); 
+
+
+    /**
+     * Manipulador para envio de mensagens do chatbot.
+     */
+    async function handleSubmitChat() {
+        const prompt = chatbotInput.value.trim();
+        if (!prompt) return;
+
+        // Verifica a chave de API
+        if (!apiKey) {
+            showError("A chave de API do Gemini está vazia. Por favor, edite o código para inserir sua chave.");
             return;
         }
-  
-        const price = areaName === 'Luanda' ? '22.000 à 35.000 KZ' : '35.000 KZ';
-        const formattedDate = new Date(data).toLocaleDateString('pt-AO', { day: '2-digit', month: '2-digit', year: 'numeric' });
-        
-        const mensagem = `Olá, gostaria de agendar maquiagem ao domicílio (Zona: ${areaName}) para o dia ${formattedDate} às ${hora}. O preço estimado é de ${price}. Já estou ciente das regras de agendamento (3 dias de antecedência) e farei o pagamento de 50% para confirmação.`;
-        
-        // Atualiza o link do WhatsApp
-        btn.href = `https://wa.me/${WAMESSAGE}?text=${encodeURIComponent(mensagem)}`;
+
+        // 1. Renderiza a mensagem do usuário
+        renderMessage(prompt, 'user');
+        chatbotInput.value = '';
+
+        // 2. UI: Inicia o estado de carregamento
+        chatbotSend.disabled = true;
+        chatbotLoading.classList.remove('hidden');
+
+        try {
+            // 3. Chama a API do Gemini
+            const result = await callGeminiApi(prompt);
+            
+            const candidate = result.candidates?.[0];
+
+            if (candidate && candidate.content?.parts?.[0]?.text) {
+                const aiText = candidate.content.parts[0].text;
+                
+                // Extrai as fontes
+                let sources = [];
+                const groundingMetadata = candidate.groundingMetadata;
+                if (groundingMetadata && groundingMetadata.groundingAttributions) {
+                    sources = groundingMetadata.groundingAttributions
+                        .map(attribution => ({
+                            uri: attribution.web?.uri,
+                            title: attribution.web?.title,
+                        }))
+                        .filter(source => source.uri && source.title);
+                }
+
+                // 4. Adiciona a resposta da IA ao histórico e renderiza
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] }); // Adiciona o prompt do usuário
+                chatHistory.push({ role: "model", parts: [{ text: aiText }] }); // Adiciona a resposta do modelo
+                
+                renderMessage(aiText, 'ai', sources);
+                
+            } else {
+                renderMessage("Desculpe, não consegui obter uma resposta. Por favor, tente reformular a pergunta.", 'ai');
+            }
+
+        } catch (error) {
+            renderMessage("Erro: Falha na comunicação com a IA. Verifique sua chave de API e a conexão.", 'ai');
+            showError(error.message);
+        } finally {
+            // 5. UI: Retorna ao estado normal
+            chatbotSend.disabled = false;
+            chatbotLoading.classList.add('hidden');
+            chatbotInput.focus();
+        }
     }
-  
-    // Atribuição de Listeners para os botões de agendamento
-    document.getElementById('btnLuanda').addEventListener('click', (e) => generateSchedulingLink('dataLuanda', 'horaLuanda', 'Luanda'));
-    document.getElementById('btnZona').addEventListener('click', (e) => generateSchedulingLink('dataZona', 'horaZona', 'Nova Vida/Talatona/Benfica/Kilamba'));
-  
-    // Inicialização principal
-    window.onload = function() {
-        // Define a data mínima para hoje
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('dataLuanda').setAttribute('min', today);
-        document.getElementById('dataZona').setAttribute('min', today);
+
+    // ==========================================================
+    // LÓGICA DE CARRINHO E AGENDAMENTO (JS BÁSICO)
+    // ==========================================================
+
+    /**
+     * Atualiza a lista de itens e o total do carrinho na UI.
+     */
+    function updateCartUI() {
+        cartList.innerHTML = '';
+        let total = 0;
+
+        if (cart.length === 0) {
+            cartList.innerHTML = '<p class="text-gray-500 italic">Seu carrinho está vazio.</p>';
+            finalizeButton.disabled = true;
+        } else {
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+
+                const itemElement = document.createElement('div');
+                itemElement.className = 'flex justify-between items-center bg-custom-fundo p-3 rounded-lg border-l-4 border-custom-amarelo';
+                itemElement.innerHTML = `
+                    <div class="flex-grow">
+                        <span class="font-semibold">${item.name}</span> 
+                        <span class="text-xs text-gray-600">(${item.quantity} x ${item.price.toLocaleString('pt-AO')} KZ)</span>
+                    </div>
+                    <strong class="text-custom-roxo">${(item.price * item.quantity).toLocaleString('pt-AO')} KZ</strong>
+                    <button data-id="${item.id}" class="ml-4 text-red-500 hover:text-red-700 font-bold remove-from-cart" title="Remover item">
+                        &times;
+                    </button>
+                `;
+                cartList.appendChild(itemElement);
+            });
+            finalizeButton.disabled = false;
+        }
+
+        cartTotalDisplay.textContent = total.toLocaleString('pt-AO');
+        updateFinalizeLink(total);
+    }
+    
+    /**
+     * Adiciona um item ao carrinho ou aumenta sua quantidade.
+     */
+    function addToCart(productId, name, price) {
+        const existingItem = cart.find(item => item.id === productId);
+
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push({ id: productId, name, price, quantity: 1 });
+        }
+        updateCartUI();
+    }
+    
+    /**
+     * Remove um item do carrinho.
+     */
+    function removeFromCart(productId) {
+        cart = cart.filter(item => item.id !== productId);
+        updateCartUI();
+    }
+
+    /**
+     * Atualiza o link de finalização do WhatsApp com a lista de itens e total.
+     */
+    function updateFinalizeLink(total) {
+        if (cart.length === 0) {
+            finalizeButton.href = `https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1!%20Gostaria%20de%20finalizar%20minha%20compra.`;
+            return;
+        }
+
+        let message = `Olá Patrícia Pattas! Gostaria de finalizar minha compra:%0A%0A`;
+        cart.forEach(item => {
+            message += `* ${item.name} (x${item.quantity}) - ${(item.price * item.quantity).toLocaleString('pt-AO')} KZ%0A`;
+        });
+        message += `%0ATOTAL: *${total.toLocaleString('pt-AO')} KZ*%0A%0AAguardando instruções de pagamento.`;
         
-        setupFirebase();
-  
-        // Adicionar listeners para os botões 'Adicionar ao Carrinho'
+        finalizeButton.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    }
+
+    /**
+     * Atualiza o link do agendamento de maquiagem.
+     */
+    function updateSchedulingLinks() {
+        const dataLuanda = document.getElementById('dataLuanda').value;
+        const horaLuanda = document.getElementById('horaLuanda').value;
+        const btnLuanda = document.getElementById('btnLuanda');
+
+        if (dataLuanda && horaLuanda) {
+            const msgLuanda = `Olá Patrícia! Gostaria de agendar maquiagem na CIDADE, no dia ${dataLuanda} às ${horaLuanda}.`;
+            btnLuanda.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msgLuanda)}`;
+        } else {
+            btnLuanda.href = '#maquiagem'; // Evita links vazios
+        }
+
+        const dataZona = document.getElementById('dataZona').value;
+        const horaZona = document.getElementById('horaZona').value;
+        const btnZona = document.getElementById('btnZona');
+
+        if (dataZona && horaZona) {
+            const msgZona = `Olá Patrícia! Gostaria de agendar maquiagem (ZONAS ESPECIAIS) no dia ${dataZona} às ${horaZona}.`;
+            btnZona.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msgZona)}`;
+        } else {
+            btnZona.href = '#maquiagem';
+        }
+    }
+
+
+    // ==========================================================
+    // INICIALIZAÇÃO E EVENT LISTENERS
+    // ==========================================================
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- 1. Menu Responsivo ---
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIconOpen.classList.toggle('hidden');
+            menuIconClose.classList.toggle('hidden');
+        });
+        
+        // --- 2. Chatbot Toggle ---
+        chatbotToggle.addEventListener('click', () => {
+            chatbotModal.classList.toggle('hidden');
+        });
+        chatbotClose.addEventListener('click', () => {
+            chatbotModal.classList.add('hidden');
+        });
+
+        // --- 3. Chatbot Send ---
+        chatbotSend.addEventListener('click', handleSubmitChat);
+        // O keydown 'Enter' já está definido no HTML input, mas garantimos que o foco está lá.
+        
+        // --- 4. Carrinho de Compras (Listeners) ---
         document.querySelectorAll('.btn-add-to-cart').forEach(button => {
-            button.addEventListener('click', (event) => {
-                const id = event.currentTarget.getAttribute('data-id');
-                const name = event.currentTarget.getAttribute('data-name');
-                const price = event.currentTarget.getAttribute('data-price');
+            button.addEventListener('click', (e) => {
+                const id = e.currentTarget.dataset.id;
+                const name = e.currentTarget.dataset.name;
+                const price = parseInt(e.currentTarget.dataset.price);
                 addToCart(id, name, price);
             });
         });
-    }
+        
+        // Listener para remover item do carrinho
+        cartList.addEventListener('click', (e) => {
+            if (e.target.classList.contains('remove-from-cart')) {
+                const id = e.target.dataset.id;
+                removeFromCart(id);
+            }
+        });
+
+        // Inicializa o carrinho na UI
+        updateCartUI();
+
+
+        // --- 5. Agendamento (Listeners) ---
+        const luandaInputs = [document.getElementById('dataLuanda'), document.getElementById('horaLuanda')];
+        const zonaInputs = [document.getElementById('dataZona'), document.getElementById('horaZona')];
+        
+        luandaInputs.forEach(input => input.addEventListener('change', updateSchedulingLinks));
+        zonaInputs.forEach(input => input.addEventListener('change', updateSchedulingLinks));
+        
+        // Garante que o link de agendamento está atualizado no carregamento inicial
+        updateSchedulingLinks();
+    });
   </script>
 </body>
 </html>
