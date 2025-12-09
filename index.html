@@ -1,711 +1,704 @@
 <!DOCTYPE html>
-
 <html lang="pt">
-
 <head>
-
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Patrícia Pattas – Vendas e Serviços</title>
-
   
-
   <!-- Tailwind CSS CDN -->
-
   <script src="https://cdn.tailwindcss.com"></script>
-
   
-
   <!-- Configuração Customizada do Tailwind para as Cores do Site -->
-
   <script>
-
     tailwind.config = {
-
       theme: {
-
         extend: {
-
           colors: {
-
-            'custom-roxo': '#6a0dad', // Seu --roxo
-
+            'custom-roxo': '#6a0dad', // Seu --roxo (Roxo de Patrícia)
             'custom-lilas': '#d8b4f8', // Seu --lilas
-
-            'custom-amarelo': '#f9dc5c', // Seu --amarelo
-
+            'custom-amarelo': '#f9dc5c', // Seu --amarelo (Ação/Destaque)
             'custom-fundo': '#f4f1fa', // Seu --fundo
-
             'custom-texto': '#2e2e2e', // Seu --texto
-
           },
-
         },
-
       },
-
     }
-
   </script>
-
 </head>
 
 <body class="bg-custom-fundo text-custom-texto font-sans">
-
-
-
+  
   <!-- Header Section -->
-
   <header class="bg-custom-roxo text-white py-8 px-4 text-center shadow-2xl">
-
     <h1 class="text-4xl font-extrabold mb-1">Patrícia Pattas</h1>
-
     <p class="text-xl font-light opacity-90">Vendas e Serviços com elegância e confiança</p>
-
   </header>
-
-
-
+  
   <!-- Navigation Bar (Desktop and Mobile) -->
-
   <nav class="bg-custom-lilas sticky top-0 z-20 shadow-md">
-
     <!-- Desktop Menu -->
-
     <div class="container mx-auto hidden md:flex justify-center gap-6 p-4">
-
         <a href="#produtos" class="nav-link">Produtos</a>
-
         <a href="#servicos" class="nav-link">Serviços</a>
-
         <a href="#carrinho" class="nav-link">Carrinho</a>
-
         <a href="#contacto" class="nav-link">Contacto</a>
-
     </div>
-
-
-
+  
     <!-- Mobile Menu Button -->
-
     <div class="flex md:hidden justify-end p-3">
-
         <button id="menu-button" class="text-custom-roxo p-2 rounded-lg hover:bg-custom-roxo/10 transition">
-
             <!-- Icone do Menu -->
-
             <svg id="menu-icon-open" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-
             <svg id="menu-icon-close" class="w-8 h-8 hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-
         </button>
-
     </div>
-
     
-
     <!-- Mobile Menu Links (Hidden by default) -->
-
     <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center pb-4 space-y-2">
-
         <a href="#produtos" class="mobile-nav-link">Produtos</a>
-
         <a href="#servicos" class="mobile-nav-link">Serviços</a>
-
         <a href="#carrinho" class="mobile-nav-link">Carrinho</a>
-
         <a href="#contacto" class="mobile-nav-link">Contacto</a>
-
     </div>
-
   </nav>
-
-
-
+  
   <!-- Products Section -->
-
   <section id="produtos" class="p-6 md:p-10 container mx-auto">
-
     <h2 class="text-3xl font-bold text-custom-roxo mb-8 text-center">Nossos Produtos de Crochê</h2>
-
-
-
+  
     <!-- Grid de Produtos Responsivo -->
-
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-
-
+  
       <!-- Produto 1: Conjunto Crochê Praia -->
-
       <div id="prod-1" class="product-card">
-
-        <img src="https://placehold.co/400x300/6a0dad/ffffff?text=Conjunto+Crochê+Praia" alt="" class="rounded-lg mb-4 w-full h-auto object-cover">
-
+        <img src="https://placehold.co/400x300/6a0dad/ffffff?text=Conjunto+Crochê+Praia" alt="Conjunto de Crochê para Praia" class="rounded-lg mb-4 w-full h-auto object-cover">
         <h3 class="text-2xl font-semibold text-custom-roxo mb-2">Conjunto Crochê Praia</h3>
-
         <p class="text-gray-600 mb-4 flex-grow">Conjunto artesanal em crochê, ideal para usar na praia. Feito à mão com carinho e estilo.</p>
-
         <strong class="text-xl text-custom-roxo mb-4">Preço: 25.000 KZ</strong>
-
         <button data-id="P001" data-name="Conjunto Crochê Praia" data-price="25000" class="btn-add-to-cart">
-
            Adicionar ao Carrinho
-
         </button>
-
       </div>
-
-
-
+  
       <!-- Produto 2: Vestido Praia Crochê -->
-
       <div id="prod-2" class="product-card">
-
-        <img src="https://placehold.co/400x300/6a0dad/ffffff?text=Vestido+Praia+Crochê" alt="" class="rounded-lg mb-4 w-full h-auto object-cover">
-
+        <img src="https://placehold.co/400x300/6a0dad/ffffff?text=Vestido+Praia+Crochê" alt="Vestido de Crochê para Praia" class="rounded-lg mb-4 w-full h-auto object-cover">
         <h3 class="text-2xl font-semibold text-custom-roxo mb-2">Vestido Praia Crochê</h3>
-
         <p class="text-gray-600 mb-4 flex-grow">Vestido leve e estiloso em crochê, ideal para dias de verão. Disponível em vários tamanhos.</p>
-
         <strong class="text-xl text-custom-roxo mb-4">Preço: 30.000 KZ</strong>
-
         <button data-id="P002" data-name="Vestido Praia Crochê" data-price="30000" class="btn-add-to-cart">
-
            Adicionar ao Carrinho
-
         </button>
-
       </div>
-
-
-
+  
       <!-- Produto 3: Bolsa de Praia Crochê -->
-
       <div id="prod-3" class="product-card">
-
-        <img src="https://placehold.co/400x300/6a0dad/ffffff?text=Bolsa+de+Praia+Crochê" alt="" class="rounded-lg mb-4 w-full h-auto object-cover">
-
+        <img src="https://placehold.co/400x300/6a0dad/ffffff?text=Bolsa+de+Praia+Crochê" alt="Bolsa de Praia em Crochê" class="rounded-lg mb-4 w-full h-auto object-cover">
         <h3 class="text-2xl font-semibold text-custom-roxo mb-2">Bolsa de Praia Crochê</h3>
-
         <p class="text-gray-600 mb-4 flex-grow">Bolsa artesanal em crochê, perfeita para levar à praia com elegância.</p>
-
         <strong class="text-xl text-custom-roxo mb-4">Preço: 15.000 KZ</strong>
-
         <button data-id="P003" data-name="Bolsa de Praia Crochê" data-price="15000" class="btn-add-to-cart">
-
            Adicionar ao Carrinho
-
         </button>
-
       </div>
-
     </div>
-
   </section>
-
-
-
+  
   <!-- Services Section -->
-
   <section id="servicos" class="p-6 md:p-10 container mx-auto">
-
     <h2 class="text-3xl font-bold text-custom-roxo mb-8 text-center">Serviços Disponíveis</h2>
-
-    <!-- Conteúdo dos serviços permanece o mesmo, com classes Tailwind -->
-
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
         <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-custom-roxo">
-
             <h3 class="text-xl font-semibold text-custom-roxo mb-2">Consultoria Comercial</h3>
-
             <p class="text-gray-600">Organizamos e divulgamos os seus produtos com estratégia e inovação.</p>
-
         </div>
-
         <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-custom-roxo">
-
             <h3 class="text-xl font-semibold text-custom-roxo mb-2">Distribuição Local</h3>
-
             <p class="text-gray-600">Entregas rápidas e seguras dentro de Angola.</p>
-
         </div>
-
         <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-custom-roxo flex justify-between items-center">
-
             <div>
-
                 <h3 class="text-xl font-semibold text-custom-roxo mb-2">Maquiagem Profissional</h3>
-
                 <p class="text-gray-600">Beleza com produtos de qualidade e profissionais experientes.</p>
-
             </div>
-
             <a class="btn bg-custom-amarelo text-custom-roxo font-bold py-2 px-4 rounded-lg hover:bg-yellow-400 transition whitespace-nowrap" href="#maquiagem">Maquiagem</a>
-
         </div>
-
         <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-custom-roxo flex justify-between items-center">
-
             <div>
-
                 <h3 class="text-xl font-semibold text-custom-roxo mb-2">Peças de Crochê</h3>
-
                 <p class="text-gray-600">Moda artesanal feita à mão com muito carinho.</p>
-
             </div>
-
             <a class="btn bg-custom-amarelo text-custom-roxo font-bold py-2 px-4 rounded-lg hover:bg-yellow-400 transition whitespace-nowrap" href="#produtos">Crochê</a>
-
         </div>
-
     </div>
-
   </section>
-
-
-
+  
   <!-- Makeup Scheduling Section -->
-
   <section id="maquiagem" class="p-6 md:p-10 container mx-auto">
-
     <h2 class="text-3xl font-bold text-custom-roxo mb-6 text-center">Maquiagem ao Domicílio</h2>
-
     <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-xl mb-8">
-
         <p class="mb-2"><strong class="text-custom-roxo">Clientes da cidade:</strong> Preço varia de 22.000 à 35.000 KZ</p>
-
         <p class="mb-4"><strong class="text-custom-roxo">Clientes de Nova Vida, Talatona, Benfica, Kilamba:</strong> Preço 35.000 KZ</p>
-
         
-
         <h3 class="text-xl font-semibold text-custom-roxo mt-4 mb-2 border-b pb-1">Regras de Agendamento</h3>
-
         <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4">
-
             <li>Agendar com pelo menos 3 dias de antecedência</li>
-
             <li>Pagamento de 50% para confirmação (será solicitada via WhatsApp)</li>
-
             <li>Não marcar se não tiver certeza do horário</li>
-
         </ul>
-
         <p class="mt-4"><strong class="text-custom-roxo">Horários disponíveis:</strong> 9-10, 12-13, 14-15, 16-17, 18-19h (Terça a Sábado)</p>
-
         <p class="mt-1"><strong class="text-custom-roxo">Métodos de pagamento:</strong> Multicaixa Express, Transferência (IBAN sob consulta)</p>
-
     </div>
-
-
-
+  
     <!-- Cards de Agendamento -->
-
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-
       
-
       <div class="bg-custom-lilas p-6 rounded-xl shadow-2xl">
-
         <h3 class="text-2xl font-bold text-custom-roxo mb-4">Agendar - Cidade de Luanda</h3>
-
         <label for="dataLuanda" class="block font-medium text-custom-roxo mb-1">Data:</label>
-
         <input type="date" id="dataLuanda" class="input-field">
-
         <label for="horaLuanda" class="block font-medium text-custom-roxo mb-1">Horário:</label>
-
         <select id="horaLuanda" class="input-field mb-6">
-
           <option value="9-10">9h - 10h</option>
-
           <option value="12-13">12h - 13h</option>
-
           <option value="14-15">14h - 15h</option>
-
           <option value="16-17">16h - 17h</option>
-
           <option value="18-19">18h - 19h</option>
-
         </select>
-
         <a class="btn-whatsapp-agenda" href="#" id="btnLuanda" target="_blank">Agendar pelo WhatsApp</a>
-
       </div>
-
-
-
+  
       <div class="bg-custom-lilas p-6 rounded-xl shadow-2xl">
-
         <h3 class="text-2xl font-bold text-custom-roxo mb-4">Agendar - Nova Vida, Talatona, etc.</h3>
-
         <label for="dataZona" class="block font-medium text-custom-roxo mb-1">Data:</label>
-
         <input type="date" id="dataZona" class="input-field">
-
         <label for="horaZona" class="block font-medium text-custom-roxo mb-1">Horário:</label>
-
         <select id="horaZona" class="input-field mb-6">
-
           <option value="9-10">9h - 10h</option>
-
           <option value="12-13">12h - 13h</option>
-
           <option value="14-15">14h - 15h</option>
-
           <option value="16-17">16h - 17h</option>
-
           <option value="18-19">18h - 19h</option>
-
         </select>
-
         <a class="btn-whatsapp-agenda" href="#" id="btnZona" target="_blank">Agendar pelo WhatsApp</a>
-
       </div>
-
     </div>
-
   </section>
-
-
-
+  
   <!-- Cart Section -->
-
   <section id="carrinho" class="p-6 md:p-10 container mx-auto text-center">
-
     <div class="bg-white p-8 rounded-xl shadow-xl max-w-lg mx-auto border-t-8 border-custom-amarelo">
-
         <h2 class="text-3xl font-bold text-custom-roxo mb-4">Seu Carrinho (<span id="user-id-display" class="text-sm font-normal text-gray-500">A carregar...</span>)</h2>
-
         
-
         <!-- Lista de Itens do Carrinho -->
-
         <div id="cart-list" class="my-6 text-left space-y-3 min-h-[100px]">
-
             <!-- Itens serão renderizados aqui pelo JS -->
-
             <p class="text-gray-500 italic">A carregar itens...</p>
-
         </div>
-
-
-
+  
         <p class="text-3xl mb-6 font-extrabold text-custom-roxo">
-
             Total: <span id="cart-total">0</span> KZ
-
         </p>
-
         <a class="btn-finalizar" 
-
            href="https://wa.me/244926837464?text=Ol%C3%A1!%20Gostaria%20de%20finalizar%20minha%20compra." 
-
-           id="btn-finalizar-compra">
-
+           id="btn-finalizar-compra" disabled>
            Finalizar Compra no WhatsApp
-
         </a>
-
     </div>
-
   </section>
-
-
-
+  
   <!-- Contact Section -->
-
   <section id="contacto" class="p-6 md:p-10 container mx-auto">
-
     <div class="bg-custom-lilas p-8 rounded-xl shadow-xl max-w-lg mx-auto">
-
         <h2 class="text-3xl font-bold text-custom-roxo mb-4 text-center">Fale Connosco</h2>
-
         <div class="space-y-3">
-
             <p class="text-lg flex items-center"><strong class="font-semibold text-custom-roxo mr-2">WhatsApp:</strong> 
-
                 +244 926 837 464
-
             </p>
-
             <p class="text-lg flex items-center"><strong class="font-semibold text-custom-roxo mr-2">Facebook:</strong> 
-
                 <a href="https://www.facebook.com/share/1BoyA2k81U/" target="_blank" class="text-custom-roxo hover:underline flex items-center">
-
                     Patrícia Pattas 
-
                     <svg class="w-5 h-5 ml-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-
                 </a>
-
             </p>
-
             <p class="text-lg"><strong class="font-semibold text-custom-roxo mr-2">Email:</strong> pattasvendas@gmail.com</p>
-
         </div>
-
     </div>
-
   </section>
-
-
-
+  
   <!-- Footer Section -->
-
   <footer class="text-center py-4 bg-custom-roxo text-white mt-12">
-
     <p class="text-sm">© 2025 Patrícia Pattas Vendas e Serviços – Todos os direitos reservados.</p>
-
   </footer>
-
-
-
+  
   <!-- Floating Chatbot Button -->
-
   <button id="chatbot-toggle-button" class="fixed bottom-6 right-6 bg-custom-amarelo text-custom-roxo p-4 rounded-full shadow-2xl hover:bg-yellow-400 transition transform hover:scale-105 z-50">
-
+    <!-- Icone de Chat -->
     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
-
   </button>
-
-
-
+  
   <!-- Chatbot Modal/Panel -->
-
   <div id="chatbot-modal" class="fixed bottom-20 right-4 w-11/12 max-w-xs md:max-w-md bg-white rounded-xl shadow-2xl z-50 hidden border border-custom-lilas">
-
     <div class="flex flex-col h-96">
-
         <!-- Chat Header -->
-
         <div class="bg-custom-roxo text-white p-4 rounded-t-xl flex justify-between items-center">
-
             <h3 class="font-bold">Assistente Patrícia Pattas (IA)</h3>
-
             <button id="chatbot-close-button" class="text-white hover:text-gray-300">
-
+                <!-- Icone Fechar -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-
             </button>
-
         </div>
-
-
-
+  
         <!-- Chat Content/Messages -->
-
         <div id="chatbot-content" class="flex-grow p-4 overflow-y-auto space-y-4">
-
             <!-- Messages go here -->
-
+            <div class="flex justify-start">
+                <div class="max-w-xs lg:max-w-md bg-gray-200 text-custom-texto rounded-tl-xl p-3 rounded-bl-xl rounded-br-xl shadow-md text-sm">
+                    A carregar assistente...
+                </div>
+            </div>
         </div>
-
         
-
         <!-- Loading Indicator -->
-
         <div id="chatbot-loading" class="text-center py-2 text-custom-roxo hidden">
-
             <div class="animate-pulse">Digitando...</div>
-
         </div>
-
-
-
+  
         <!-- Chat Input -->
-
         <div class="p-4 border-t border-custom-lilas flex space-x-2">
-
             <input type="text" id="chatbot-input" placeholder="Pergunte sobre produtos ou maquiagem..." class="input-field flex-grow" onkeydown="if(event.key === 'Enter') document.getElementById('chatbot-send').click()">
-
             <button id="chatbot-send" class="bg-custom-amarelo text-custom-roxo p-3 rounded-full hover:bg-yellow-400 transition disabled:opacity-50">
-
+                <!-- Icone Enviar -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
-
             </button>
-
         </div>
-
     </div>
-
   </div>
-
-
-
+  
   <!-- Estilos Adicionais -->
-
   <style>
-
     /* Estilos dos Componentes para Reutilização */
-
     .nav-link {
-
         @apply text-custom-roxo font-bold text-lg hover:text-custom-amarelo transition duration-300 rounded-lg p-2;
-
     }
-
     .mobile-nav-link {
-
         @apply text-custom-roxo font-bold text-xl hover:bg-custom-roxo/10 w-full text-center py-2;
-
     }
-
     .product-card {
-
         @apply bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 flex flex-col items-center text-center;
-
     }
-
     .btn-add-to-cart {
-
         @apply bg-custom-amarelo text-custom-roxo font-extrabold py-3 px-6 rounded-full hover:bg-yellow-400 transition shadow-lg w-full max-w-[250px] mt-2 disabled:bg-gray-400 disabled:cursor-not-allowed;
-
     }
-
     .btn-whatsapp-agenda {
-
         @apply bg-custom-amarelo text-custom-roxo font-extrabold py-3 px-6 rounded-full hover:bg-yellow-400 transition shadow-md w-full text-center block;
-
     }
-
     .btn-finalizar {
-
         @apply bg-custom-roxo text-white font-extrabold py-3 px-8 rounded-full hover:bg-purple-800 transition shadow-lg inline-block disabled:bg-gray-400 disabled:cursor-not-allowed;
-
     }
-
     .input-field {
-
         @apply p-2 border border-gray-300 rounded-lg w-full focus:ring-custom-roxo focus:border-custom-roxo;
-
     }
-
     /* Estilo para a caixa de mensagens do chatbot */
-
     #chatbot-content::-webkit-scrollbar {
-
         width: 8px;
-
     }
-
     #chatbot-content::-webkit-scrollbar-thumb {
-
         background-color: #d8b4f8; /* lilas */
-
         border-radius: 4px;
-
     }
-
   </style>
-
-
-
+  
   <!-- JavaScript Module for Firebase, Cart, Menu, and Chatbot -->
-
   <script type="module">
-
     // --- Firebase Global Variables (MANDATORY) ---
-
     const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-
     const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
-
     const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
-
-
-
+  
     // --- Firebase Imports ---
-
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-
     import { getAuth, signInWithCustomToken, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-
     import { getFirestore, doc, collection, onSnapshot, updateDoc, deleteDoc, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-
     import { setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-
-
-
+  
     setLogLevel('debug'); // Ativar logs do Firestore
-
-
-
+  
     let db, auth;
-
     let userId = null;
-
     let cartItems = [];
-
-    const WAMESSAGE = "244926837464"; // Número de WhatsApp
-
+    const WAMESSAGE = "244926837464"; // Número de WhatsApp da Patrícia
     const CURRENCY_FORMAT = new Intl.NumberFormat('pt-AO', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-
-
-
+  
     // --- 1. FIREBASE SETUP & CART LOGIC ---
-
-
-
+  
     async function setupFirebase() {
-
         try {
-
             const app = initializeApp(firebaseConfig);
-
             db = getFirestore(app);
-
             auth = getAuth(app);
-
-
-
+  
             // Tenta autenticar com token ou anonimamente
-
-            if (initialAuthToken) {
-
-                await signInWithCustomToken(auth, initialAuthToken);
-
-            } else {
-
-                await signInAnonymously(auth);
-
-            }
-
+            const signInPromise = initialAuthToken
+                ? signInWithCustomToken(auth, initialAuthToken)
+                : signInAnonymously(auth);
             
-
-            // Listener de estado de autenticação
-
-            onAuthStateChanged(auth, (user) => {
-
-                if (user) {
-
-                    userId = user.uid;
-
-                    document.getElementById('user-id-display').textContent = `ID: ${userId}`;
-
-                    loadCartItems();
-
-                } else {
-
-                    // Estado de fallback (ID temporário se sign-in falhar, mas o ideal é que funcione)
-
-                    userId = crypto.randomUUID(); 
-
-                    document.getElementById('user-id-display').textContent = `ID: ${userId} (Anônimo)`;
-
-                    loadCartItems();
-
-                }
-
+            await signInPromise.catch(error => {
+                console.error("Falha na autenticação inicial:", error);
+                // Permite continuar anonimamente se o token falhar
             });
-
-
-
+            
+            // Listener de estado de autenticação
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    userId = user.uid;
+                    // Exibe o ID do usuário para fins de rastreamento/debug (MANDATÓRIO)
+                    document.getElementById('user-id-display').textContent = `ID: ${userId}`;
+                    loadCartItems();
+                } else {
+                    // Fallback se o user for nulo (embora a autenticação anônima deva retornar um user)
+                    userId = crypto.randomUUID(); 
+                    document.getElementById('user-id-display').textContent = `ID: ${userId} (Anônimo - Fallback)`;
+                    loadCartItems(); // Tenta carregar mesmo no fallback
+                }
+            });
+  
         } catch (error) {
-
             console.error("Falha na inicialização do Firebase:", error);
-
-            document.getElementById('cart-list').innerHTML = '<p class="text-red-500">Erro ao in
+            document.getElementById('cart-list').innerHTML = '<p class="text-red-500">Erro ao inicializar o banco de dados. Tente recarregar.</p>';
+        }
+    }
+  
+    function getCartCollectionRef() {
+        if (!db || !userId) return null;
+        // Caminho: /artifacts/{appId}/users/{userId}/cartItems (Private Data)
+        return collection(db, `artifacts/${appId}/users/${userId}/cartItems`);
+    }
+  
+    // Renderiza o Carrinho na UI
+    function renderCart() {
+        const cartList = document.getElementById('cart-list');
+        const cartTotalElement = document.getElementById('cart-total');
+        const finalCartMessageElement = document.getElementById('btn-finalizar-compra');
+        
+        // Limpa o conteúdo e remove qualquer indicador de carregamento
+        cartList.innerHTML = '';
+        
+        if (!cartList || !cartTotalElement || !finalCartMessageElement) return;
+  
+        let total = 0;
+        let waItems = "Pedido:\n"; // Mensagem para o WhatsApp
+  
+        if (cartItems.length === 0) {
+            cartList.innerHTML = '<p class="text-gray-500 italic">O seu carrinho está vazio. Adicione alguns produtos!</p>';
+            cartTotalElement.textContent = '0';
+            finalCartMessageElement.disabled = true;
+            finalCartMessageElement.href = `https://wa.me/${WAMESSAGE}?text=Ol%C3%A1!%20Gostaria%20de%20finalizar%20minha%20compra.%20(Carrinho%20vazio)`;
+            return;
+        }
+  
+        cartItems.forEach(item => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+            waItems += `- ${item.name} (${item.quantity}x) | ${CURRENCY_FORMAT.format(itemTotal)} KZ\n`;
+  
+            const itemElement = document.createElement('div');
+            itemElement.className = 'flex justify-between items-center bg-gray-50 p-3 rounded-lg shadow-sm mb-2';
+            itemElement.innerHTML = `
+                <div>
+                    <p class="font-semibold text-custom-roxo">${item.name}</p>
+                    <p class="text-sm text-gray-600">${item.quantity} x ${CURRENCY_FORMAT.format(item.price)} KZ</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button data-id="${item.id}" data-action="decrease" class="text-xl font-bold text-custom-roxo hover:text-custom-amarelo transition">-</button>
+                    <span class="font-bold w-4 text-center">${item.quantity}</span>
+                    <button data-id="${item.id}" data-action="increase" class="text-xl font-bold text-custom-roxo hover:text-custom-amarelo transition">+</button>
+                    <button data-id="${item.id}" data-action="remove" class="text-red-500 hover:text-red-700 transition ml-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+                    </button>
+                </div>
+            `;
+            cartList.appendChild(itemElement);
+        });
+  
+        cartTotalElement.textContent = CURRENCY_FORMAT.format(total);
+        finalCartMessageElement.disabled = false;
+  
+        const waText = `Olá Patrícia! Gostaria de finalizar minha compra:\n${waItems}\n*Total: ${CURRENCY_FORMAT.format(total)} KZ*\n\nAguardando instruções para pagamento.`;
+        finalCartMessageElement.href = `https://wa.me/${WAMESSAGE}?text=${encodeURIComponent(waText)}`;
+  
+        // Reatribuir listeners para botões de quantidade/remoção (Importante pois o HTML é recriado)
+        cartList.querySelectorAll('button[data-action]').forEach(button => {
+            button.addEventListener('click', handleCartAction);
+        });
+    }
+  
+    // Carrega e ouve por mudanças no carrinho via onSnapshot
+    function loadCartItems() {
+        const cartRef = getCartCollectionRef();
+        if (!cartRef) {
+             // Se não houver db ou userId, apenas mostra o estado inicial de carregamento/erro
+            document.getElementById('cart-list').innerHTML = '<p class="text-gray-500 italic">Aguardando autenticação...</p>';
+            return;
+        }
+  
+        // Inicia o listener em tempo real
+        onSnapshot(cartRef, (snapshot) => {
+            const items = [];
+            snapshot.forEach(doc => {
+                const data = doc.data();
+                // O doc.id é usado como o ID primário do item do carrinho no Firestore
+                items.push({ id: doc.id, ...data });
+            });
+            cartItems = items;
+            renderCart();
+        }, (error) => {
+            console.error("Erro ao ouvir itens do carrinho:", error);
+            document.getElementById('cart-list').innerHTML = '<p class="text-red-500">Erro ao carregar o carrinho em tempo real. Tente novamente.</p>';
+        });
+    }
+  
+    async function addToCart(productId, name, price) {
+        if (!userId) return console.error("Usuário não autenticado ou carregando.");
+        const cartRef = getCartCollectionRef();
+        if (!cartRef) return;
+        
+        // Bloquear botão e dar feedback visual
+        const btn = event.currentTarget;
+        btn.disabled = true;
+        btn.textContent = 'Adicionando...';
+  
+        try {
+            // Verifica se o item já existe no cache local
+            const existingItem = cartItems.find(item => item.productId === productId);
+  
+            if (existingItem) {
+                const itemDocRef = doc(db, cartRef.path, existingItem.id);
+                // Aumenta a quantidade
+                await updateDoc(itemDocRef, { quantity: existingItem.quantity + 1 });
+            } else {
+                // Adiciona novo item
+                await addDoc(cartRef, {
+                    productId,
+                    name,
+                    price: Number(price),
+                    quantity: 1,
+                    createdAt: new Date()
+                });
+            }
+        } catch (e) {
+            console.error("Erro ao adicionar ao carrinho:", e);
+            btn.textContent = 'Erro!';
+        } finally {
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.textContent = 'Adicionar ao Carrinho';
+            }, 1000);
+        }
+    }
+  
+    async function handleCartAction(event) {
+        const button = event.currentTarget;
+        const itemId = button.getAttribute('data-id');
+        const action = button.getAttribute('data-action');
+        const item = cartItems.find(i => i.id === itemId);
+  
+        if (!item || !userId) return;
+  
+        const cartRef = getCartCollectionRef();
+        const itemDocRef = doc(db, cartRef.path, itemId);
+  
+        try {
+            if (action === 'increase') {
+                await updateDoc(itemDocRef, { quantity: item.quantity + 1 });
+            } else if (action === 'decrease') {
+                if (item.quantity > 1) {
+                    await updateDoc(itemDocRef, { quantity: item.quantity - 1 });
+                } else {
+                    // Remove o item se a quantidade for 1
+                    await deleteDoc(itemDocRef);
+                }
+            } else if (action === 'remove') {
+                await deleteDoc(itemDocRef);
+            }
+        } catch (e) {
+            console.error("Erro ao realizar ação no carrinho:", e);
+        }
+    }
+    
+    // --- 2. MENU HAMBURGER LOGIC ---
+    document.getElementById('menu-button').addEventListener('click', () => {
+        const menu = document.getElementById('mobile-menu');
+        const openIcon = document.getElementById('menu-icon-open');
+        const closeIcon = document.getElementById('menu-icon-close');
+        
+        menu.classList.toggle('hidden');
+        openIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    });
+  
+    // Fechar menu ao clicar em um link
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.add('hidden');
+            document.getElementById('menu-icon-open').classList.remove('hidden');
+            document.getElementById('menu-icon-close').classList.add('hidden');
+        });
+    });
+  
+    // --- 3. CHATBOT LOGIC (GEMINI API) ---
+    const GEMINI_API_KEY = "";
+    const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent";
+  
+    let chatHistory = [];
+    const chatbotContent = document.getElementById('chatbot-content');
+    const chatbotInput = document.getElementById('chatbot-input');
+    const chatbotLoading = document.getElementById('chatbot-loading');
+    const chatbotModal = document.getElementById('chatbot-modal');
+    
+    // Toggle Chatbot Modal
+    document.getElementById('chatbot-toggle-button').addEventListener('click', () => {
+        chatbotModal.classList.toggle('hidden');
+        if (!chatbotModal.classList.contains('hidden') && chatHistory.length === 0) {
+            initChatbot();
+        }
+        // Rola para o final
+        chatbotContent.scrollTop = chatbotContent.scrollHeight;
+    });
+    document.getElementById('chatbot-close-button').addEventListener('click', () => {
+        chatbotModal.classList.add('hidden');
+    });
+  
+    function displayMessage(text, isUser) {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = `flex mb-4 ${isUser ? 'justify-end' : 'justify-start'}`;
+        msgDiv.innerHTML = `
+            <div class="max-w-xs lg:max-w-md ${isUser ? 'bg-custom-roxo text-white rounded-tr-xl' : 'bg-gray-200 text-custom-texto rounded-tl-xl'} p-3 rounded-bl-xl rounded-br-xl shadow-md text-sm">
+                ${text.replace(/\n/g, '<br>')}
+            </div>
+        `;
+        chatbotContent.appendChild(msgDiv);
+        chatbotContent.scrollTop = chatbotContent.scrollHeight;
+    }
+  
+    async function sendMessage() {
+        const userMessage = chatbotInput.value.trim();
+        if (!userMessage) return;
+  
+        chatbotInput.value = '';
+        displayMessage(userMessage, true);
+        chatHistory.push({ role: "user", parts: [{ text: userMessage }] });
+        
+        chatbotLoading.classList.remove('hidden');
+        document.getElementById('chatbot-send').disabled = true;
+  
+        const payload = {
+            contents: chatHistory,
+            systemInstruction: {
+                parts: [{ text: "Você é Patrícia Pattas, uma vendedora e consultora de estilo em Angola. Sua loja vende roupas de crochê e oferece serviços de maquiagem e consultoria comercial. Responda de forma amigável, prestativa e profissional em Português, focando em moda, beleza e atendimento ao cliente. Use emojis moderadamente. Nunca mencione que você é um modelo de linguagem ou IA. As informações de contato são: WhatsApp 244926837464, Email pattasvendas@gmail.com. Não tente agendar; apenas direcione para o WhatsApp ou a seção de agendamento '#maquiagem'." }]
+            },
+        };
+  
+        try {
+            const response = await fetchWithRetry(GEMINI_API_URL + `?key=${GEMINI_API_KEY}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+  
+            const result = await response.json();
+            const modelResponse = result.candidates?.[0]?.content?.parts?.[0]?.text || "Desculpe, não consegui processar sua pergunta agora. 😔";
+  
+            chatHistory.push({ role: "model", parts: [{ text: modelResponse }] });
+            displayMessage(modelResponse, false);
+  
+        } catch (error) {
+            console.error("Erro da API Gemini:", error);
+            displayMessage("Opa! Tivemos um problema de comunicação. Por favor, tente novamente mais tarde. 🛠️", false);
+        } finally {
+            chatbotLoading.classList.add('hidden');
+            document.getElementById('chatbot-send').disabled = false;
+        }
+    }
+    
+    // Função utilitária para fetch com retentativa (Exponential Backoff)
+    async function fetchWithRetry(url, options, maxRetries = 3) {
+        for (let i = 0; i < maxRetries; i++) {
+            try {
+                const response = await fetch(url, options);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return response;
+            } catch (error) {
+                if (i === maxRetries - 1) throw error;
+                const delay = Math.pow(2, i) * 1000;
+                await new Promise(resolve => setTimeout(resolve, delay));
+            }
+        }
+    }
+  
+    function initChatbot() {
+        const initialMsg = "Olá! Sou Patrícia Pattas, sua assistente virtual. Como posso te ajudar hoje com nossos produtos de crochê, agendamentos de maquiagem ou consultoria? 😊";
+        chatHistory.push({ role: "model", parts: [{ text: initialMsg }] });
+        // Limpa e exibe a mensagem inicial.
+        chatbotContent.innerHTML = '';
+        displayMessage(initialMsg, false);
+    }
+    document.getElementById('chatbot-send').addEventListener('click', sendMessage);
+  
+    // --- 4. REFINAMENTO DO AGENDAMENTO (WhatsApp Link Generation) ---
+  
+    function generateSchedulingLink(dataId, horaId, areaName) {
+        const dataInput = document.getElementById(dataId);
+        const horaSelect = document.getElementById(horaId);
+        const data = dataInput.value;
+        const hora = horaSelect.value;
+        const btn = event.currentTarget;
+        
+        // Remove mensagens de erro anteriores
+        btn.parentElement.querySelector('p.error-message')?.remove();
+        
+        if (!data) {
+            const errorMsg = document.createElement('p');
+            errorMsg.className = 'text-red-700 text-sm mt-2 font-bold error-message';
+            errorMsg.textContent = '⚠️ Por favor, selecione uma data para agendar.';
+            // Insere a mensagem de erro antes do botão
+            btn.parentElement.insertBefore(errorMsg, btn);
+            event.preventDefault(); 
+            return;
+        }
+  
+        const price = areaName === 'Luanda' ? '22.000 à 35.000 KZ' : '35.000 KZ';
+        const formattedDate = new Date(data).toLocaleDateString('pt-AO', { day: '2-digit', month: '2-digit', year: 'numeric' });
+        
+        const mensagem = `Olá, gostaria de agendar maquiagem ao domicílio (Zona: ${areaName}) para o dia ${formattedDate} às ${hora}. O preço estimado é de ${price}. Já estou ciente das regras de agendamento (3 dias de antecedência) e farei o pagamento de 50% para confirmação.`;
+        
+        // Atualiza o link do WhatsApp
+        btn.href = `https://wa.me/${WAMESSAGE}?text=${encodeURIComponent(mensagem)}`;
+    }
+  
+    // Atribuição de Listeners para os botões de agendamento
+    document.getElementById('btnLuanda').addEventListener('click', (e) => generateSchedulingLink('dataLuanda', 'horaLuanda', 'Luanda'));
+    document.getElementById('btnZona').addEventListener('click', (e) => generateSchedulingLink('dataZona', 'horaZona', 'Nova Vida/Talatona/Benfica/Kilamba'));
+  
+    // Inicialização principal
+    window.onload = function() {
+        // Define a data mínima para hoje
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('dataLuanda').setAttribute('min', today);
+        document.getElementById('dataZona').setAttribute('min', today);
+        
+        setupFirebase();
+  
+        // Adicionar listeners para os botões 'Adicionar ao Carrinho'
+        document.querySelectorAll('.btn-add-to-cart').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const id = event.currentTarget.getAttribute('data-id');
+                const name = event.currentTarget.getAttribute('data-name');
+                const price = event.currentTarget.getAttribute('data-price');
+                addToCart(id, name, price);
+            });
+        });
+    }
+  </script>
+</body>
+</html>
