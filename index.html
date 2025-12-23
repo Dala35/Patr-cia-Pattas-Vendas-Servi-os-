@@ -1,733 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Patrícia Pattas – Vendas e Serviços</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Configuração Customizada do Tailwind para as Cores do Site -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'custom-roxo': '#6a0dad', // Roxo de Patrícia
-            'custom-lilas': '#d8b4f8', 
-            'custom-amarelo': '#f9dc5c', // Ação/Destaque
-            'custom-fundo': '#f4f1fa', 
-            'custom-texto': '#2e2e2e', 
-          },
-        },
-      },
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Patrícia Pattas – Vendas e Serviços</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        roxo: '#6a0dad',
+        lilas: '#d8b4f8',
+        amarelo: '#f9dc5c',
+        fundo: '#f4f1fa',
+        texto: '#2e2e2e'
+      }
     }
-  </script>
+  }
+}
+</script>
 </head>
 
-<body class="bg-custom-fundo text-custom-texto font-sans">
-  
-  <!-- Header Section -->
-  <header class="bg-custom-roxo text-white py-8 px-4 text-center shadow-2xl">
-    <h1 class="text-4xl font-extrabold mb-1">Patrícia Pattas</h1>
-    <p class="text-xl font-light opacity-90">Vendas e Serviços com elegância e confiança</p>
-  </header>
-  
-  <!-- Navigation Bar (Desktop and Mobile) -->
-  <nav class="bg-custom-lilas sticky top-0 z-20 shadow-md">
-    <!-- Desktop Menu -->
-    <div class="container mx-auto hidden md:flex justify-center gap-6 p-4">
-        <a href="#produtos" class="nav-link">Produtos</a>
-        <a href="#servicos" class="nav-link">Serviços</a>
-        <a href="#carrinho" class="nav-link">Carrinho</a>
-        <a href="#contacto" class="nav-link">Contacto</a>
-    </div>
-  
-    <!-- Mobile Menu Button -->
-    <div class="flex md:hidden justify-end p-3">
-        <button id="menu-button" class="text-custom-roxo p-2 rounded-lg hover:bg-custom-roxo/10 transition">
-            <!-- Icone do Menu -->
-            <svg id="menu-icon-open" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-            <svg id="menu-icon-close" class="w-8 h-8 hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-        </button>
-    </div>
-    
-    <!-- Mobile Menu Links (Hidden by default) -->
-    <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center pb-4 space-y-2">
-        <a href="#produtos" class="mobile-nav-link">Produtos</a>
-        <a href="#servicos" class="mobile-nav-link">Serviços</a>
-        <a href="#carrinho" class="mobile-nav-link">Carrinho</a>
-        <a href="#contacto" class="mobile-nav-link">Contacto</a>
-    </div>
-  </nav>
-  
-  <!-- Products Section -->
-  <section id="galeria" class="p-6 md:p-10 container mx-auto">
-    <h2 class="text-3xl font-bold text-custom-roxo mb-8 text-center">Galeria de Trabalhos</h2>
-    <div class="flex flex-wrap gap-5 justify-center">
-      
-      <!-- Crochê Artesanal -->
-      <div class="max-w-[calc(50%-10px)] sm:max-w-[300px] bg-white rounded-xl shadow-lg overflow-hidden">
-        <!-- Placeholder Image com Patas, já que o nome é Pattas -->
-        <img src="https://placehold.co/600x400/d8b4f8/6a0dad?text=Crochê+by+Pattas" alt="Crochê Artesanal" class="w-full h-auto object-cover aspect-[4/3] transform hover:scale-105 transition duration-500">
-        <p class="text-center py-2 text-custom-texto font-medium">Crochê Artesanal</p>
-      </div>
+<body class="bg-fundo text-texto">
 
-      <!-- Maquiagem Profissional -->
-      <div class="max-w-[calc(50%-10px)] sm:max-w-[300px] bg-white rounded-xl shadow-lg overflow-hidden">
-        <img src="https://placehold.co/600x400/6a0dad/ffffff?text=Makeup+by+Patrícia" alt="Maquiagem Profissional" class="w-full h-auto object-cover aspect-[4/3] transform hover:scale-105 transition duration-500">
-        <p class="text-center py-2 text-custom-texto font-medium">Makeup Profissional</p>
-      </div>
+<header class="bg-roxo text-white text-center py-8 shadow-xl">
+  <h1 class="text-4xl font-extrabold">Patrícia Pattas</h1>
+  <p class="text-lg opacity-90">Vendas e Serviços com elegância e confiança</p>
+</header>
 
-      <!-- Kit de Maquiagem -->
-      <div class="max-w-[calc(50%-10px)] sm:max-w-[300px] bg-white rounded-xl shadow-lg overflow-hidden">
-        <img src="https://placehold.co/600x400/f9dc5c/6a0dad?text=Kit+Maquiagem" alt="Kit de Maquiagem" class="w-full h-auto object-cover aspect-[4/3] transform hover:scale-105 transition duration-500">
-        <p class="text-center py-2 text-custom-texto font-medium">Kit de Maquiagem Profissional</p>
-      </div>
+<section id="galeria" class="container mx-auto p-8">
+<h2 class="text-3xl font-bold text-roxo text-center mb-8">Galeria de Trabalhos</h2>
 
-      <!-- Produtos de Crochê -->
-      <div class="max-w-[calc(50%-10px)] sm:max-w-[300px] bg-white rounded-xl shadow-lg overflow-hidden">
-        <img src="https://placehold.co/600x400/d8b4f8/6a0dad?text=Moda+Crochê" alt="Produtos de Crochê" class="w-full h-auto object-cover aspect-[4/3] transform hover:scale-105 transition duration-500">
-        <p class="text-center py-2 text-custom-texto font-medium">Produtos Feitos em Crochê</p>
-      </div>
-    </div>
-  </section>
+<div class="flex flex-wrap justify-center gap-6">
 
-  <section id="produtos" class="p-6 md:p-10 container mx-auto">
-    <h2 class="text-3xl font-bold text-custom-roxo mb-8 text-center">Nossos Produtos de Crochê</h2>
-  
-    <!-- Grid de Produtos Responsivo -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-  
-      <!-- Produto 1: Conjunto Crochê Praia -->
-      <div id="prod-1" class="product-card">
-        <img src="https://placehold.co/400x300/6a0dad/ffffff?text=Conjunto+Crochê+Praia" alt="Conjunto de Crochê para Praia" class="rounded-lg mb-4 w-full h-auto object-cover">
-        <h3 class="text-2xl font-semibold text-custom-roxo mb-2">Conjunto Crochê Praia</h3>
-        <p class="text-gray-600 mb-4 flex-grow">Conjunto artesanal em crochê, ideal para usar na praia. Feito à mão com carinho e estilo.</p>
-        <strong class="text-xl text-custom-roxo mb-4">Preço: 25.000 KZ</strong>
-        <button data-id="P001" data-name="Conjunto Crochê Praia" data-price="25000" class="btn-add-to-cart">
-           Adicionar ao Carrinho
-        </button>
-      </div>
-  
-      <!-- Produto 2: Vestido Praia Crochê -->
-      <div id="prod-2" class="product-card">
-        <img src="https://placehold.co/400x300/6a0dad/ffffff?text=Vestido+Praia+Crochê" alt="Vestido de Crochê para Praia" class="rounded-lg mb-4 w-full h-auto object-cover">
-        <h3 class="text-2xl font-semibold text-custom-roxo mb-2">Vestido Praia Crochê</h3>
-        <p class="text-gray-600 mb-4 flex-grow">Vestido leve e estiloso em crochê, ideal para dias de verão. Disponível em vários tamanhos.</p>
-        <strong class="text-xl text-custom-roxo mb-4">Preço: 30.000 KZ</strong>
-        <button data-id="P002" data-name="Vestido Praia Crochê" data-price="30000" class="btn-add-to-cart">
-           Adicionar ao Carrinho
-        </button>
-      </div>
-  
-      <!-- Produto 3: Bolsa de Praia Crochê -->
-      <div id="prod-3" class="product-card">
-        <img src="https://placehold.co/400x300/6a0dad/ffffff?text=Bolsa+de+Praia+Crochê" alt="Bolsa de Praia em Crochê" class="rounded-lg mb-4 w-full h-auto object-cover">
-        <h3 class="text-2xl font-semibold text-custom-roxo mb-2">Bolsa de Praia Crochê</h3>
-        <p class="text-gray-600 mb-4 flex-grow">Bolsa artesanal em crochê, perfeita para levar à praia com elegância.</p>
-        <strong class="text-xl text-custom-roxo mb-4">Preço: 15.000 KZ</strong>
-        <button data-id="P003" data-name="Bolsa de Praia Crochê" data-price="15000" class="btn-add-to-cart">
-           Adicionar ao Carrinho
-        </button>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Services Section -->
-  <section id="servicos" class="p-6 md:p-10 container mx-auto">
-    <h2 class="text-3xl font-bold text-custom-roxo mb-8 text-center">Serviços Disponíveis</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-custom-roxo">
-            <h3 class="text-xl font-semibold text-custom-roxo mb-2">Consultoria Comercial</h3>
-            <p class="text-gray-600">Organizamos e divulgamos os seus produtos com estratégia e inovação.</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-custom-roxo">
-            <h3 class="text-xl font-semibold text-custom-roxo mb-2">Distribuição Local</h3>
-            <p class="text-gray-600">Entregas rápidas e seguras dentro de Angola.</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-custom-roxo flex justify-between items-center">
-            <div>
-                <h3 class="text-xl font-semibold text-custom-roxo mb-2">Maquiagem Profissional</h3>
-                <p class="text-gray-600">Beleza com produtos de qualidade e profissionais experientes.</p>
-            </div>
-            <a class="btn bg-custom-amarelo text-custom-roxo font-bold py-2 px-4 rounded-lg hover:bg-yellow-400 transition whitespace-nowrap" href="#maquiagem">Maquiagem</a>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-custom-roxo flex justify-between items-center">
-            <div>
-                <h3 class="text-xl font-semibold text-custom-roxo mb-2">Peças de Crochê</h3>
-                <p class="text-gray-600">Moda artesanal feita à mão com muito carinho.</p>
-            </div>
-            <a class="btn bg-custom-amarelo text-custom-roxo font-bold py-2 px-4 rounded-lg hover:bg-yellow-400 transition whitespace-nowrap" href="#produtos">Crochê</a>
-        </div>
-    </div>
-  </section>
-  
-  <!-- Makeup Scheduling Section -->
-  <section id="maquiagem" class="p-6 md:p-10 container mx-auto">
-    <h2 class="text-3xl font-bold text-custom-roxo mb-6 text-center">Maquiagem ao Domicílio</h2>
-    <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-xl mb-8">
-        <p class="mb-2"><strong class="text-custom-roxo">Clientes da cidade:</strong> Preço varia de 22.000 à 35.000 KZ</p>
-        <p class="mb-4"><strong class="text-custom-roxo">Clientes de Nova Vida, Talatona, Benfica, Kilamba:</strong> Preço 35.000 KZ</p>
-        
-        <h3 class="text-xl font-semibold text-custom-roxo mt-4 mb-2 border-b pb-1">Regras de Agendamento</h3>
-        <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4">
-            <li>Agendar com pelo menos 3 dias de antecedência</li>
-            <li>Pagamento de 50% para confirmação (será solicitada via WhatsApp)</li>
-            <li>Não marcar se não tiver certeza do horário</li>
-        </ul>
-        <p class="mt-4"><strong class="text-custom-roxo">Horários disponíveis:</strong> 9-10, 12-13, 14-15, 16-17, 18-19h (Terça a Sábado)</p>
-        <p class="mt-1"><strong class="text-custom-roxo">Métodos de pagamento:</strong> Multicaixa Express, Transferência (IBAN sob consulta)</p>
-    </div>
-  
-    <!-- Cards de Agendamento -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-      
-      <div class="bg-custom-lilas p-6 rounded-xl shadow-2xl">
-        <h3 class="text-2xl font-bold text-custom-roxo mb-4">Agendar - Cidade de Luanda</h3>
-        <label for="dataLuanda" class="block font-medium text-custom-roxo mb-1">Data:</label>
-        <input type="date" id="dataLuanda" class="input-field">
-        <label for="horaLuanda" class="block font-medium text-custom-roxo mb-1">Horário:</label>
-        <select id="horaLuanda" class="input-field mb-6">
-          <option value="9-10">9h - 10h</option>
-          <option value="12-13">12h - 13h</option>
-          <option value="14-15">14h - 15h</option>
-          <option value="16-17">16h - 17h</option>
-          <option value="18-19">18h - 19h</option>
-        </select>
-        <a class="btn-whatsapp-agenda" href="#" id="btnLuanda" target="_blank">Agendar pelo WhatsApp</a>
-      </div>
-  
-      <div class="bg-custom-lilas p-6 rounded-xl shadow-2xl">
-        <h3 class="text-2xl font-bold text-custom-roxo mb-4">Agendar - Nova Vida, Talatona, etc.</h3>
-        <label for="dataZona" class="block font-medium text-custom-roxo mb-1">Data:</label>
-        <input type="date" id="dataZona" class="input-field">
-        <label for="horaZona" class="block font-medium text-custom-roxo mb-1">Horário:</label>
-        <select id="horaZona" class="input-field mb-6">
-          <option value="9-10">9h - 10h</option>
-          <option value="12-13">12h - 13h</option>
-          <option value="14-15">14h - 15h</option>
-          <option value="16-17">16h - 17h</option>
-          <option value="18-19">18h - 19h</option>
-        </select>
-        <a class="btn-whatsapp-agenda" href="#" id="btnZona" target="_blank">Agendar pelo WhatsApp</a>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Cart Section (Auth removed for external use simplification) -->
-  <section id="carrinho" class="p-6 md:p-10 container mx-auto text-center">
-    <div class="bg-white p-8 rounded-xl shadow-xl max-w-lg mx-auto border-t-8 border-custom-amarelo">
-        <h2 class="text-3xl font-bold text-custom-roxo mb-4">Seu Carrinho</h2>
-        
-        <!-- Lista de Itens do Carrinho -->
-        <div id="cart-list" class="my-6 text-left space-y-3 min-h-[100px]">
-            <!-- Itens serão renderizados aqui pelo JS -->
-            <p class="text-gray-500 italic">Seu carrinho está vazio.</p>
-        </div>
-  
-        <p class="text-3xl mb-6 font-extrabold text-custom-roxo">
-            Total: <span id="cart-total">0</span> KZ
-        </p>
-        <a class="btn-finalizar" 
-           href="https://wa.me/244926837464?text=Ol%C3%A1!%20Gostaria%20de%20finalizar%20minha%20compra." 
-           id="btn-finalizar-compra" disabled>
-           Finalizar Compra no WhatsApp
-        </a>
-    </div>
-  </section>
-  
-  <!-- Contact Section -->
-  <section id="contacto" class="p-6 md:p-10 container mx-auto">
-    <div class="bg-custom-lilas p-8 rounded-xl shadow-xl max-w-lg mx-auto">
-        <h2 class="text-3xl font-bold text-custom-roxo mb-4 text-center">Fale Connosco</h2>
-        <div class="space-y-3">
-            <p class="text-lg flex items-center"><strong class="font-semibold text-custom-roxo mr-2">WhatsApp:</strong> 
-                +244 926 837 464
-            </p>
-            <p class="text-lg flex items-center"><strong class="font-semibold text-custom-roxo mr-2">Facebook:</strong> 
-                <a href="https://www.facebook.com/share/1BoyA2k81U/" target="_blank" class="text-custom-roxo hover:underline flex items-center">
-                    Patrícia Pattas 
-                    <svg class="w-5 h-5 ml-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-                </a>
-            </p>
-            <p class="text-lg"><strong class="font-semibold text-custom-roxo mr-2">Email:</strong> pattasvendas@gmail.com</p>
-        </div>
-    </div>
-  </section>
-  
-  <!-- Footer Section -->
-  <footer class="text-center py-4 bg-custom-roxo text-white mt-12">
-    <p class="text-sm">© 2025 Patrícia Pattas Vendas e Serviços – Todos os direitos reservados.</p>
-  </footer>
-  
-  <!-- Floating Chatbot Button -->
-  <button id="chatbot-toggle-button" class="fixed bottom-6 right-6 bg-custom-amarelo text-custom-roxo p-4 rounded-full shadow-2xl hover:bg-yellow-400 transition transform hover:scale-105 z-50">
-    <!-- Icone de Chat -->
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
-  </button>
-  
-  <!-- Chatbot Modal/Panel -->
-  <div id="chatbot-modal" class="fixed bottom-20 right-4 w-11/12 max-w-xs md:max-w-md bg-white rounded-xl shadow-2xl z-50 hidden border border-custom-lilas">
-    <div class="flex flex-col h-96">
-        <!-- Chat Header -->
-        <div class="bg-custom-roxo text-white p-4 rounded-t-xl flex justify-between items-center">
-            <h3 class="font-bold">Assistente Patrícia Pattas (IA)</h3>
-            <button id="chatbot-close-button" class="text-white hover:text-gray-300">
-                <!-- Icone Fechar -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-            </button>
-        </div>
-  
-        <!-- Chat Content/Messages -->
-        <div id="chatbot-content" class="flex-grow p-4 overflow-y-auto space-y-4">
-            <!-- Mensagem de Boas-vindas da IA -->
-            <div class="flex justify-start">
-                <div class="max-w-[85%] bg-custom-lilas text-custom-texto rounded-tl-xl p-3 rounded-bl-xl rounded-br-xl shadow-md text-sm">
-                    Olá! Sou o Assistente Patrícia Pattas. Estou aqui para responder às suas perguntas sobre nossos produtos de crochê, serviços e agendamentos de maquiagem. Como posso ajudar você hoje?
-                </div>
-            </div>
-        </div>
-        
-        <!-- Loading Indicator -->
-        <div id="chatbot-loading" class="text-center py-2 text-custom-roxo hidden">
-            <div class="animate-pulse">Digitando...</div>
-        </div>
-  
-        <!-- Chat Input -->
-        <div class="p-4 border-t border-custom-lilas flex space-x-2">
-            <input type="text" id="chatbot-input" placeholder="Pergunte sobre produtos ou maquiagem..." class="input-field flex-grow" onkeydown="if(event.key === 'Enter') document.getElementById('chatbot-send').click()">
-            <button id="chatbot-send" class="bg-custom-amarelo text-custom-roxo p-3 rounded-full hover:bg-yellow-400 transition disabled:opacity-50">
-                <!-- Icone Enviar -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
-            </button>
-        </div>
-    </div>
-  </div>
-  
-  <!-- Custom Modal for Errors (Replaces alert()) -->
-  <div id="error-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center p-4 z-[100]">
-      <div class="bg-white p-6 rounded-xl shadow-2xl max-w-md w-full border-t-8 border-red-500">
-          <h3 class="text-xl font-bold text-red-600 mb-4">Aviso Crítico</h3>
-          <p id="error-message" class="text-gray-700"></p>
-          <button onclick="document.getElementById('error-modal').classList.add('hidden')" class="mt-4 w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition">Entendi</button>
-      </div>
-  </div>
-  
-  <!-- Estilos Adicionais -->
-  <style>
-    /* Estilos dos Componentes para Reutilização */
-    .nav-link {
-        @apply text-custom-roxo font-bold text-lg hover:text-custom-amarelo transition duration-300 rounded-lg p-2;
-    }
-    .mobile-nav-link {
-        @apply text-custom-roxo font-bold text-xl hover:bg-custom-roxo/10 w-full text-center py-2;
-    }
-    .product-card {
-        @apply bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 flex flex-col items-center text-center;
-    }
-    .btn-add-to-cart {
-        @apply bg-custom-amarelo text-custom-roxo font-extrabold py-3 px-6 rounded-full hover:bg-yellow-400 transition shadow-lg w-full max-w-[250px] mt-2 disabled:bg-gray-400 disabled:cursor-not-allowed;
-    }
-    .btn-whatsapp-agenda {
-        @apply bg-custom-amarelo text-custom-roxo font-extrabold py-3 px-6 rounded-full hover:bg-yellow-400 transition shadow-md w-full text-center block;
-    }
-    .btn-finalizar {
-        @apply bg-custom-roxo text-white font-extrabold py-3 px-8 rounded-full hover:bg-purple-800 transition shadow-lg inline-block disabled:bg-gray-400 disabled:cursor-not-allowed;
-    }
-    .input-field {
-        @apply p-2 border border-gray-300 rounded-lg w-full focus:ring-custom-roxo focus:border-custom-roxo;
-    }
-    /* Estilo para a caixa de mensagens do chatbot */
-    #chatbot-content::-webkit-scrollbar {
-        width: 8px;
-    }
-    #chatbot-content::-webkit-scrollbar-thumb {
-        background-color: #d8b4f8; /* lilas */
-        border-radius: 4px;
-    }
-  </style>
-  
-  <!-- JavaScript Module for Site Logic and Chatbot -->
-  <script type="module">
-    // ==========================================================
-    // INÍCIO: CONFIGURAÇÃO DE AMBIENTE E API
-    // ==========================================================
-    
-    // ATENÇÃO: PARA USAR FORA DO CANVAS, VOCÊ DEVE PREENCHER SUA CHAVE AQUI.
-    // EM PRODUÇÃO, ESTA CHAVE DEVE SER CHAMADA DE UM SERVIDOR SEGURO (BACK-END).
-    const apiKey = "";AIzaSyBzWNk7WgAfgufx0ltlq4fjddk3iIWPcas
-    const model = "gemini-2.5-flash-preview-09-2025";
-    const WHATSAPP_NUMBER = "244926837464";
+<div class="bg-white rounded-xl shadow-lg w-72 overflow-hidden">
+<img src="assets/img/croche1.jpg" class="w-full h-48 object-cover">
+<p class="text-center py-2 font-semibold">Crochê Artesanal</p>
+</div>
 
-    const SYSTEM_INSTRUCTION = `Você é o Assistente Virtual Patrícia Pattas. Seu objetivo é fornecer informações de forma elegante, confiante e concisa sobre os produtos (Crochê: Conjunto Praia, Vestido Praia, Bolsa Praia) e serviços (Consultoria Comercial, Distribuição, Maquiagem Profissional) oferecidos. Use o contexto da Pesquisa Google (Grounding) apenas para perguntas externas aos produtos da loja, respondendo o que for relevante para o negócio.
-    
-    Informações chave:
-    - Maquiagem ao Domicílio (Cidade): Preço varia de 22.000 à 35.000 KZ.
-    - Maquiagem ao Domicílio (Nova Vida, Talatona, Benfica, Kilamba): Preço 35.000 KZ.
-    - Agendamento: Pelo menos 3 dias de antecedência, pagamento de 50% para confirmar.
-    - Contacto WhatsApp para Compras/Agendamento: +244 926 837 464.
-    - Produtos de Crochê: Conjunto Crochê Praia (25.000 KZ), Vestido Praia Crochê (30.000 KZ), Bolsa de Praia Crochê (15.000 KZ).
-    
-    Responda sempre em Português e mantenha o foco em ajudar o cliente a comprar ou agendar.`;
+<div class="bg-white rounded-xl shadow-lg w-72 overflow-hidden">
+<img src="assets/img/makeup1.jpg" class="w-full h-48 object-cover">
+<p class="text-center py-2 font-semibold">Makeup Profissional</p>
+</div>
 
-    // Estado local para armazenar o histórico do chat
-    let chatHistory = [];
+<div class="bg-white rounded-xl shadow-lg w-72 overflow-hidden">
+<img src="assets/img/makeup-kit.jpg" class="w-full h-48 object-cover">
+<p class="text-center py-2 font-semibold">Kit de Maquiagem</p>
+</div>
 
-    // ==========================================================
-    // FIM: CONFIGURAÇÃO DE AMBIENTE E API
-    // ==========================================================
+<div class="bg-white rounded-xl shadow-lg w-72 overflow-hidden">
+<img src="assets/img/croche2.jpg" class="w-full h-48 object-cover">
+<p class="text-center py-2 font-semibold">Moda Crochê</p>
+</div>
 
+</div>
+</section>
 
-    // --- Elementos DOM ---
-    const menuButton = document.getElementById('menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIconOpen = document.getElementById('menu-icon-open');
-    const menuIconClose = document.getElementById('menu-icon-close');
-    const chatbotToggle = document.getElementById('chatbot-toggle-button');
-    const chatbotModal = document.getElementById('chatbot-modal');
-    const chatbotClose = document.getElementById('chatbot-close-button');
-    const chatbotContent = document.getElementById('chatbot-content');
-    const chatbotInput = document.getElementById('chatbot-input');
-    const chatbotSend = document.getElementById('chatbot-send');
-    const chatbotLoading = document.getElementById('chatbot-loading');
-    const errorModal = document.getElementById('error-modal');
-    const errorMessage = document.getElementById('error-message');
-    
-    // --- Variáveis do Carrinho (Simplificadas sem Firestore) ---
-    let cart = [];
-    const cartList = document.getElementById('cart-list');
-    const cartTotalDisplay = document.getElementById('cart-total');
-    const finalizeButton = document.getElementById('btn-finalizar-compra');
+<section id="contacto" class="container mx-auto p-8">
+<div class="bg-lilas p-8 rounded-xl shadow-xl max-w-lg mx-auto">
+<h2 class="text-3xl font-bold text-roxo text-center mb-4">Contacto</h2>
 
-    /**
-     * Exibe um modal customizado de erro (substituindo o alert()).
-     * @param {string} message Mensagem de erro a ser exibida.
-     */
-    function showError(message) {
-        errorMessage.textContent = message;
-        errorModal.classList.remove('hidden');
-        errorModal.classList.add('flex');
-    }
-    
-    // ==========================================================
-    // LÓGICA DO CHATBOT (INTEGRAÇÃO GEMINI)
-    // ==========================================================
+<p><strong>WhatsApp:</strong> +244 926 837 464</p>
+<p><strong>Email:</strong> pattasvendas@gmail.com</p>
+<p>
+<strong>Facebook:</strong>
+<a class="text-roxo underline" target="_blank"
+href="https://www.facebook.com/share/1BoyA2k81U/">Patrícia Pattas</a>
+</p>
+</div>
+</section>
 
-    /**
-     * Renderiza uma mensagem no chat.
-     * @param {string} text O texto da mensagem.
-     * @param {string} sender O remetente ('user' ou 'ai').
-     * @param {Array<Object>} [sources=[]] Fontes de grounding (apenas para 'ai').
-     */
-    function renderMessage(text, sender, sources = []) {
-        const messageWrapper = document.createElement('div');
-        const messageBubble = document.createElement('div');
-        
-        // Define o alinhamento e as cores da bolha de chat
-        if (sender === 'user') {
-            messageWrapper.className = 'flex justify-end';
-            messageBubble.className = 'max-w-[85%] bg-custom-roxo text-white rounded-tr-xl p-3 rounded-bl-xl rounded-tl-xl shadow-md text-sm whitespace-pre-wrap';
-        } else {
-            messageWrapper.className = 'flex justify-start';
-            messageBubble.className = 'max-w-[85%] bg-custom-lilas text-custom-texto rounded-tl-xl p-3 rounded-bl-xl rounded-br-xl shadow-md text-sm whitespace-pre-wrap';
-        }
+<footer class="bg-roxo text-white text-center py-4">
+© 2025 Patrícia Pattas – Todos os direitos reservados
+</footer>
 
-        // Adiciona o texto da mensagem
-        messageBubble.textContent = text;
-        
-        // Adiciona as fontes de citação (se existirem)
-        if (sources && sources.length > 0) {
-            const sourcesDiv = document.createElement('div');
-            sourcesDiv.className = 'mt-2 pt-2 border-t border-gray-400 text-xs text-gray-700';
-            sourcesDiv.innerHTML = '<strong>Fontes:</strong><ul class="list-disc ml-4 space-y-0">';
-            sources.forEach(source => {
-                sourcesDiv.innerHTML += `<li><a href="${source.uri}" target="_blank" class="text-blue-700 hover:underline">${source.title}</a></li>`;
-            });
-            sourcesDiv.innerHTML += '</ul>';
-            messageBubble.appendChild(sourcesDiv);
-        }
+<script>
+// CHATBOT SIMPLES LOCAL
+const btn = document.createElement("button");
+btn.textContent = "💬";
+btn.className =
+"fixed bottom-6 right-6 bg-amarelo text-roxo font-bold p-4 rounded-full shadow-xl";
+document.body.appendChild(btn);
 
-        messageWrapper.appendChild(messageBubble);
-        chatbotContent.appendChild(messageWrapper);
-        
-        // Mantém a rolagem no final da conversa
-        chatbotContent.scrollTop = chatbotContent.scrollHeight;
-    }
+btn.onclick = () => alert("Olá! Para compras ou agendamentos, contacte-nos pelo WhatsApp 😊");
+</script>
 
-    /**
-     * Chama a API do Gemini com Google Search Grounding e Exponential Backoff.
-     */
-    async function callGeminiApi(prompt, attempt = 0) {
-        const maxAttempts = 5;
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-
-        // Adiciona a nova mensagem do usuário ao histórico antes de enviar
-        const chatHistoryWithNewPrompt = [...chatHistory, { role: "user", parts: [{ text: prompt }] }];
-
-        const payload = {
-            contents: chatHistoryWithNewPrompt,
-            systemInstruction: {
-                parts: [{ text: SYSTEM_INSTRUCTION }]
-            },
-            // Ativa o Google Search Grounding
-            tools: [{ "google_search": {} }],
-        };
-
-        try {
-            const response = await fetch(apiUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
-
-            if (response.status === 429 && attempt < maxAttempts - 1) {
-                const delay = Math.pow(2, attempt) * 1000 + Math.random() * 1000;
-                await new Promise(resolve => setTimeout(resolve, delay));
-                return callGeminiApi(prompt, attempt + 1);
-            }
-
-            if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(`Erro na API: ${response.statusText} (${response.status}). Detalhes: ${errorData.error?.message || JSON.stringify(errorData)}`);
-            }
-
-            return await response.json();
-
-        } catch (error) {
-            console.error("Erro fatal durante a chamada da API:", error);
-            throw new Error(`Falha na comunicação com a IA: ${error.message}`);
-        }
-    }
-
-
-    /**
-     * Manipulador para envio de mensagens do chatbot.
-     */
-    async function handleSubmitChat() {
-        const prompt = chatbotInput.value.trim();
-        if (!prompt) return;
-
-        // Verifica a chave de API
-        if (!apiKey) {
-            showError("A chave de API do Gemini está vazia. Por favor, edite o código para inserir sua chave.");
-            return;
-        }
-
-        // 1. Renderiza a mensagem do usuário
-        renderMessage(prompt, 'user');
-        chatbotInput.value = '';
-
-        // 2. UI: Inicia o estado de carregamento
-        chatbotSend.disabled = true;
-        chatbotLoading.classList.remove('hidden');
-
-        try {
-            // 3. Chama a API do Gemini
-            const result = await callGeminiApi(prompt);
-            
-            const candidate = result.candidates?.[0];
-
-            if (candidate && candidate.content?.parts?.[0]?.text) {
-                const aiText = candidate.content.parts[0].text;
-                
-                // Extrai as fontes
-                let sources = [];
-                const groundingMetadata = candidate.groundingMetadata;
-                if (groundingMetadata && groundingMetadata.groundingAttributions) {
-                    sources = groundingMetadata.groundingAttributions
-                        .map(attribution => ({
-                            uri: attribution.web?.uri,
-                            title: attribution.web?.title,
-                        }))
-                        .filter(source => source.uri && source.title);
-                }
-
-                // 4. Adiciona a resposta da IA ao histórico e renderiza
-                chatHistory.push({ role: "user", parts: [{ text: prompt }] }); // Adiciona o prompt do usuário
-                chatHistory.push({ role: "model", parts: [{ text: aiText }] }); // Adiciona a resposta do modelo
-                
-                renderMessage(aiText, 'ai', sources);
-                
-            } else {
-                renderMessage("Desculpe, não consegui obter uma resposta. Por favor, tente reformular a pergunta.", 'ai');
-            }
-
-        } catch (error) {
-            renderMessage("Erro: Falha na comunicação com a IA. Verifique sua chave de API e a conexão.", 'ai');
-            showError(error.message);
-        } finally {
-            // 5. UI: Retorna ao estado normal
-            chatbotSend.disabled = false;
-            chatbotLoading.classList.add('hidden');
-            chatbotInput.focus();
-        }
-    }
-
-    // ==========================================================
-    // LÓGICA DE CARRINHO E AGENDAMENTO (JS BÁSICO)
-    // ==========================================================
-
-    /**
-     * Atualiza a lista de itens e o total do carrinho na UI.
-     */
-    function updateCartUI() {
-        cartList.innerHTML = '';
-        let total = 0;
-
-        if (cart.length === 0) {
-            cartList.innerHTML = '<p class="text-gray-500 italic">Seu carrinho está vazio.</p>';
-            finalizeButton.disabled = true;
-        } else {
-            cart.forEach(item => {
-                total += item.price * item.quantity;
-
-                const itemElement = document.createElement('div');
-                itemElement.className = 'flex justify-between items-center bg-custom-fundo p-3 rounded-lg border-l-4 border-custom-amarelo';
-                itemElement.innerHTML = `
-                    <div class="flex-grow">
-                        <span class="font-semibold">${item.name}</span> 
-                        <span class="text-xs text-gray-600">(${item.quantity} x ${item.price.toLocaleString('pt-AO')} KZ)</span>
-                    </div>
-                    <strong class="text-custom-roxo">${(item.price * item.quantity).toLocaleString('pt-AO')} KZ</strong>
-                    <button data-id="${item.id}" class="ml-4 text-red-500 hover:text-red-700 font-bold remove-from-cart" title="Remover item">
-                        &times;
-                    </button>
-                `;
-                cartList.appendChild(itemElement);
-            });
-            finalizeButton.disabled = false;
-        }
-
-        cartTotalDisplay.textContent = total.toLocaleString('pt-AO');
-        updateFinalizeLink(total);
-    }
-    
-    /**
-     * Adiciona um item ao carrinho ou aumenta sua quantidade.
-     */
-    function addToCart(productId, name, price) {
-        const existingItem = cart.find(item => item.id === productId);
-
-        if (existingItem) {
-            existingItem.quantity += 1;
-        } else {
-            cart.push({ id: productId, name, price, quantity: 1 });
-        }
-        updateCartUI();
-    }
-    
-    /**
-     * Remove um item do carrinho.
-     */
-    function removeFromCart(productId) {
-        cart = cart.filter(item => item.id !== productId);
-        updateCartUI();
-    }
-
-    /**
-     * Atualiza o link de finalização do WhatsApp com a lista de itens e total.
-     */
-    function updateFinalizeLink(total) {
-        if (cart.length === 0) {
-            finalizeButton.href = `https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1!%20Gostaria%20de%20finalizar%20minha%20compra.`;
-            return;
-        }
-
-        let message = `Olá Patrícia Pattas! Gostaria de finalizar minha compra:%0A%0A`;
-        cart.forEach(item => {
-            message += `* ${item.name} (x${item.quantity}) - ${(item.price * item.quantity).toLocaleString('pt-AO')} KZ%0A`;
-        });
-        message += `%0ATOTAL: *${total.toLocaleString('pt-AO')} KZ*%0A%0AAguardando instruções de pagamento.`;
-        
-        finalizeButton.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
-    }
-
-    /**
-     * Atualiza o link do agendamento de maquiagem.
-     */
-    function updateSchedulingLinks() {
-        const dataLuanda = document.getElementById('dataLuanda').value;
-        const horaLuanda = document.getElementById('horaLuanda').value;
-        const btnLuanda = document.getElementById('btnLuanda');
-
-        if (dataLuanda && horaLuanda) {
-            const msgLuanda = `Olá Patrícia! Gostaria de agendar maquiagem na CIDADE, no dia ${dataLuanda} às ${horaLuanda}.`;
-            btnLuanda.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msgLuanda)}`;
-        } else {
-            btnLuanda.href = '#maquiagem'; // Evita links vazios
-        }
-
-        const dataZona = document.getElementById('dataZona').value;
-        const horaZona = document.getElementById('horaZona').value;
-        const btnZona = document.getElementById('btnZona');
-
-        if (dataZona && horaZona) {
-            const msgZona = `Olá Patrícia! Gostaria de agendar maquiagem (ZONAS ESPECIAIS) no dia ${dataZona} às ${horaZona}.`;
-            btnZona.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msgZona)}`;
-        } else {
-            btnZona.href = '#maquiagem';
-        }
-    }
-
-
-    // ==========================================================
-    // INICIALIZAÇÃO E EVENT LISTENERS
-    // ==========================================================
-
-    document.addEventListener('DOMContentLoaded', () => {
-        // --- 1. Menu Responsivo ---
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            menuIconOpen.classList.toggle('hidden');
-            menuIconClose.classList.toggle('hidden');
-        });
-        
-        // --- 2. Chatbot Toggle ---
-        chatbotToggle.addEventListener('click', () => {
-            chatbotModal.classList.toggle('hidden');
-        });
-        chatbotClose.addEventListener('click', () => {
-            chatbotModal.classList.add('hidden');
-        });
-
-        // --- 3. Chatbot Send ---
-        chatbotSend.addEventListener('click', handleSubmitChat);
-        // O keydown 'Enter' já está definido no HTML input, mas garantimos que o foco está lá.
-        
-        // --- 4. Carrinho de Compras (Listeners) ---
-        document.querySelectorAll('.btn-add-to-cart').forEach(button => {
-            button.addEventListener('click', (e) => {
-                const id = e.currentTarget.dataset.id;
-                const name = e.currentTarget.dataset.name;
-                const price = parseInt(e.currentTarget.dataset.price);
-                addToCart(id, name, price);
-            });
-        });
-        
-        // Listener para remover item do carrinho
-        cartList.addEventListener('click', (e) => {
-            if (e.target.classList.contains('remove-from-cart')) {
-                const id = e.target.dataset.id;
-                removeFromCart(id);
-            }
-        });
-
-        // Inicializa o carrinho na UI
-        updateCartUI();
-
-
-        // --- 5. Agendamento (Listeners) ---
-        const luandaInputs = [document.getElementById('dataLuanda'), document.getElementById('horaLuanda')];
-        const zonaInputs = [document.getElementById('dataZona'), document.getElementById('horaZona')];
-        
-        luandaInputs.forEach(input => input.addEventListener('change', updateSchedulingLinks));
-        zonaInputs.forEach(input => input.addEventListener('change', updateSchedulingLinks));
-        
-        // Garante que o link de agendamento está atualizado no carregamento inicial
-        updateSchedulingLinks();
-    });
-  </script>
 </body>
 </html>
