@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Patrícia Pattas – Vendas e Serviços</title>
 
-  <!-- Tailwind CDN -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind Config -->
   <script>
     tailwind.config = {
       theme: {
@@ -19,9 +18,9 @@
             'custom-amarelo': '#f9dc5c',
             'custom-fundo': '#f4f1fa',
             'custom-texto': '#2e2e2e',
-          }
-        }
-      }
+          },
+        },
+      },
     }
   </script>
 </head>
@@ -30,132 +29,118 @@
 
 <!-- HEADER -->
 <header class="bg-custom-roxo text-white py-8 px-4 text-center shadow-2xl">
-  <h1 class="text-4xl font-extrabold">Patrícia Pattas</h1>
+  <h1 class="text-4xl font-extrabold mb-1">Patrícia Pattas</h1>
   <p class="text-xl font-light opacity-90">Vendas e Serviços com elegância e confiança</p>
 </header>
 
-<!-- NAV -->
-<nav class="bg-custom-lilas sticky top-0 z-20 shadow-md">
-  <div class="hidden md:flex justify-center gap-6 p-4">
-    <a href="#produtos" class="font-bold text-lg text-custom-roxo hover:text-custom-amarelo transition p-2">Produtos</a>
-    <a href="#servicos" class="font-bold text-lg text-custom-roxo hover:text-custom-amarelo transition p-2">Serviços</a>
-    <a href="#carrinho" class="font-bold text-lg text-custom-roxo hover:text-custom-amarelo transition p-2">Carrinho</a>
-    <a href="#contacto" class="font-bold text-lg text-custom-roxo hover:text-custom-amarelo transition p-2">Contacto</a>
-  </div>
-</nav>
-
 <!-- GALERIA -->
-<section class="container mx-auto p-8">
-  <h2 class="text-3xl font-bold text-custom-roxo text-center mb-8">Galeria de Trabalhos</h2>
+<section id="galeria" class="p-6 md:p-10 container mx-auto">
+  <h2 class="text-3xl font-bold text-custom-roxo mb-8 text-center">Galeria de Trabalhos</h2>
 
-  <div class="flex flex-wrap justify-center gap-6">
-    <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-xs">
-      <img src="https://placehold.co/600x400/d8b4f8/6a0dad?text=Crochê+by+Pattas" class="hover:scale-105 transition">
+  <div class="flex flex-wrap gap-5 justify-center">
+
+    <!-- Crochê Artesanal -->
+    <div class="max-w-[300px] bg-white rounded-xl shadow-lg overflow-hidden">
+      <img
+        src="https://placehold.co/600x400/d8b4f8/6a0dad?text=Crochê+by+Pattas"
+        alt="Crochê Artesanal"
+        class="w-full object-cover aspect-[4/3] hover:scale-105 transition duration-500">
       <p class="text-center py-2 font-medium">Crochê Artesanal</p>
     </div>
 
-    <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-xs">
-      <img src="https://placehold.co/600x400/6a0dad/ffffff?text=Makeup+by+Patrícia" class="hover:scale-105 transition">
-      <p class="text-center py-2 font-medium">Maquiagem Profissional</p>
+    <!-- Maquiagem Profissional -->
+    <div class="max-w-[300px] bg-white rounded-xl shadow-lg overflow-hidden">
+      <img
+        src="https://placehold.co/600x400/6a0dad/ffffff?text=Makeup+by+Patrícia"
+        alt="Maquiagem Profissional"
+        class="w-full object-cover aspect-[4/3] hover:scale-105 transition duration-500">
+      <p class="text-center py-2 font-medium">Makeup Profissional</p>
     </div>
+
+    <!-- Kit de Maquiagem -->
+    <div class="max-w-[300px] bg-white rounded-xl shadow-lg overflow-hidden">
+      <img
+        src="https://placehold.co/600x400/f9dc5c/6a0dad?text=Kit+Maquiagem"
+        alt="Kit de Maquiagem"
+        class="w-full object-cover aspect-[4/3] hover:scale-105 transition duration-500">
+      <p class="text-center py-2 font-medium">Kit de Maquiagem Profissional</p>
+    </div>
+
+    <!-- Produtos de Crochê -->
+    <div class="max-w-[300px] bg-white rounded-xl shadow-lg overflow-hidden">
+      <img
+        src="https://placehold.co/600x400/d8b4f8/6a0dad?text=Moda+Crochê"
+        alt="Produtos de Crochê"
+        class="w-full object-cover aspect-[4/3] hover:scale-105 transition duration-500">
+      <p class="text-center py-2 font-medium">Produtos Feitos em Crochê</p>
+    </div>
+
   </div>
 </section>
 
 <!-- PRODUTOS -->
-<section id="produtos" class="container mx-auto p-8">
-  <h2 class="text-3xl font-bold text-custom-roxo text-center mb-8">Produtos de Crochê</h2>
+<section id="produtos" class="p-6 md:p-10 container mx-auto">
+  <h2 class="text-3xl font-bold text-custom-roxo mb-8 text-center">
+    Nossos Produtos de Crochê
+  </h2>
 
-  <div class="grid md:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Produto 1 -->
     <div class="bg-white p-6 rounded-xl shadow-xl text-center">
-      <h3 class="text-xl font-bold text-custom-roxo mb-2">Conjunto Crochê Praia</h3>
-      <p class="mb-3">Preço: <strong>25.000 KZ</strong></p>
-      <button data-id="P001" data-name="Conjunto Crochê Praia" data-price="25000"
-        class="btn-add bg-custom-amarelo font-bold py-2 px-4 rounded-full w-full hover:bg-yellow-400">
-        Adicionar ao Carrinho
-      </button>
+      <img
+        src="https://placehold.co/400x300/6a0dad/ffffff?text=Conjunto+Crochê+Praia"
+        alt="Conjunto de Crochê para Praia"
+        class="rounded-lg mb-4 w-full object-cover">
+      <h3 class="text-2xl font-semibold text-custom-roxo mb-2">
+        Conjunto Crochê Praia
+      </h3>
+      <p class="text-gray-600 mb-2">
+        Conjunto artesanal em crochê, ideal para usar na praia.
+      </p>
+      <strong class="text-custom-roxo">Preço: 25.000 KZ</strong>
     </div>
 
+    <!-- Produto 2 -->
     <div class="bg-white p-6 rounded-xl shadow-xl text-center">
-      <h3 class="text-xl font-bold text-custom-roxo mb-2">Vestido Praia Crochê</h3>
-      <p class="mb-3">Preço: <strong>30.000 KZ</strong></p>
-      <button data-id="P002" data-name="Vestido Praia Crochê" data-price="30000"
-        class="btn-add bg-custom-amarelo font-bold py-2 px-4 rounded-full w-full hover:bg-yellow-400">
-        Adicionar ao Carrinho
-      </button>
+      <img
+        src="https://placehold.co/400x300/6a0dad/ffffff?text=Vestido+Praia+Crochê"
+        alt="Vestido de Crochê para Praia"
+        class="rounded-lg mb-4 w-full object-cover">
+      <h3 class="text-2xl font-semibold text-custom-roxo mb-2">
+        Vestido Praia Crochê
+      </h3>
+      <p class="text-gray-600 mb-2">
+        Vestido leve e estiloso em crochê.
+      </p>
+      <strong class="text-custom-roxo">Preço: 30.000 KZ</strong>
     </div>
 
+    <!-- Produto 3 -->
     <div class="bg-white p-6 rounded-xl shadow-xl text-center">
-      <h3 class="text-xl font-bold text-custom-roxo mb-2">Bolsa de Praia Crochê</h3>
-      <p class="mb-3">Preço: <strong>15.000 KZ</strong></p>
-      <button data-id="P003" data-name="Bolsa de Praia Crochê" data-price="15000"
-        class="btn-add bg-custom-amarelo font-bold py-2 px-4 rounded-full w-full hover:bg-yellow-400">
-        Adicionar ao Carrinho
-      </button>
+      <img
+        src="https://placehold.co/400x300/6a0dad/ffffff?text=Bolsa+de+Praia+Crochê"
+        alt="Bolsa de Praia em Crochê"
+        class="rounded-lg mb-4 w-full object-cover">
+      <h3 class="text-2xl font-semibold text-custom-roxo mb-2">
+        Bolsa de Praia Crochê
+      </h3>
+      <p class="text-gray-600 mb-2">
+        Bolsa artesanal em crochê.
+      </p>
+      <strong class="text-custom-roxo">Preço: 15.000 KZ</strong>
     </div>
+
   </div>
 </section>
 
-<!-- CARRINHO -->
-<section id="carrinho" class="container mx-auto p-8">
-  <div class="bg-white p-6 rounded-xl shadow-xl max-w-md mx-auto text-center">
-    <h2 class="text-2xl font-bold text-custom-roxo mb-4">Carrinho</h2>
-    <div id="cart-list" class="mb-4 text-left text-gray-600 italic">Carrinho vazio</div>
-    <p class="font-bold text-xl mb-4">Total: <span id="cart-total">0</span> KZ</p>
-
-    <a id="finalizar"
-       class="bg-custom-roxo text-white py-3 px-6 rounded-full inline-block opacity-50 pointer-events-none">
-       Finalizar no WhatsApp
-    </a>
-  </div>
-</section>
-
-<!-- CONTACTO -->
-<section id="contacto" class="container mx-auto p-8">
-  <div class="bg-custom-lilas p-6 rounded-xl shadow-xl max-w-md mx-auto">
-    <h2 class="text-2xl font-bold text-custom-roxo mb-4 text-center">Contacto</h2>
-    <p><strong>WhatsApp:</strong> +244 926 837 464</p>
-    <p><strong>Email:</strong> pattasvendas@gmail.com</p>
-  </div>
-</section>
-
-<footer class="bg-custom-roxo text-white text-center py-4">
-  © 2025 Patrícia Pattas – Todos os direitos reservados
+<!-- FOOTER -->
+<footer class="text-center py-4 bg-custom-roxo text-white mt-12">
+  <p class="text-sm">
+    © 2025 Patrícia Pattas Vendas e Serviços – Todos os direitos reservados.
+  </p>
 </footer>
-
-<!-- JS -->
-<script>
-  const cart = [];
-  const cartList = document.getElementById('cart-list');
-  const cartTotal = document.getElementById('cart-total');
-  const finalizar = document.getElementById('finalizar');
-  const WHATSAPP = "244926837464";
-
-  document.querySelectorAll('.btn-add').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const name = btn.dataset.name;
-      const price = Number(btn.dataset.price);
-      cart.push({ name, price });
-      updateCart();
-    });
-  });
-
-  function updateCart() {
-    cartList.innerHTML = '';
-    let total = 0;
-
-    cart.forEach(item => {
-      total += item.price;
-      cartList.innerHTML += `<div>${item.name} - ${item.price} KZ</div>`;
-    });
-
-    cartTotal.textContent = total;
-
-    if (cart.length) {
-      finalizar.classList.remove('opacity-50','pointer-events-none');
-      finalizar.href = `https://wa.me/${WHATSAPP}?text=Olá! Quero finalizar minha compra. Total: ${total} KZ`;
-    }
-  }
-</script>
 
 </body>
 </html>
+
