@@ -1,90 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Patrícia Pattas – Vendas e Serviços</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patrícia Pattas – Vendas e Serviços</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        roxo: '#6a0dad',
-        lilas: '#d8b4f8',
-        amarelo: '#f9dc5c',
-        fundo: '#f4f1fa',
-        texto: '#2e2e2e'
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'custom-roxo': '#6a0dad',
+            'custom-lilas': '#d8b4f8',
+            'custom-amarelo': '#f9dc5c',
+            'custom-fundo': '#f4f1fa',
+            'custom-texto': '#2e2e2e',
+          }
+        }
       }
     }
-  }
-}
-</script>
+  </script>
 </head>
 
-<body class="bg-fundo text-texto">
+<body class="bg-custom-fundo text-custom-texto font-sans">
 
-<header class="bg-roxo text-white text-center py-8 shadow-xl">
+<!-- HEADER -->
+<header class="bg-custom-roxo text-white py-8 px-4 text-center shadow-2xl">
   <h1 class="text-4xl font-extrabold">Patrícia Pattas</h1>
-  <p class="text-lg opacity-90">Vendas e Serviços com elegância e confiança</p>
+  <p class="text-xl font-light opacity-90">Vendas e Serviços com elegância e confiança</p>
 </header>
 
-<section id="galeria" class="container mx-auto p-8">
-<h2 class="text-3xl font-bold text-roxo text-center mb-8">Galeria de Trabalhos</h2>
+<!-- NAV -->
+<nav class="bg-custom-lilas sticky top-0 z-20 shadow-md">
+  <div class="hidden md:flex justify-center gap-6 p-4">
+    <a href="#produtos" class="font-bold text-lg text-custom-roxo hover:text-custom-amarelo transition p-2">Produtos</a>
+    <a href="#servicos" class="font-bold text-lg text-custom-roxo hover:text-custom-amarelo transition p-2">Serviços</a>
+    <a href="#carrinho" class="font-bold text-lg text-custom-roxo hover:text-custom-amarelo transition p-2">Carrinho</a>
+    <a href="#contacto" class="font-bold text-lg text-custom-roxo hover:text-custom-amarelo transition p-2">Contacto</a>
+  </div>
+</nav>
 
-<div class="flex flex-wrap justify-center gap-6">
+<!-- GALERIA -->
+<section class="container mx-auto p-8">
+  <h2 class="text-3xl font-bold text-custom-roxo text-center mb-8">Galeria de Trabalhos</h2>
 
-<div class="bg-white rounded-xl shadow-lg w-72 overflow-hidden">
-<img src="assets/img/croche1.jpg" class="w-full h-48 object-cover">
-<p class="text-center py-2 font-semibold">Crochê Artesanal</p>
-</div>
+  <div class="flex flex-wrap justify-center gap-6">
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-xs">
+      <img src="https://placehold.co/600x400/d8b4f8/6a0dad?text=Crochê+by+Pattas" class="hover:scale-105 transition">
+      <p class="text-center py-2 font-medium">Crochê Artesanal</p>
+    </div>
 
-<div class="bg-white rounded-xl shadow-lg w-72 overflow-hidden">
-<img src="assets/img/makeup1.jpg" class="w-full h-48 object-cover">
-<p class="text-center py-2 font-semibold">Makeup Profissional</p>
-</div>
-
-<div class="bg-white rounded-xl shadow-lg w-72 overflow-hidden">
-<img src="assets/img/makeup-kit.jpg" class="w-full h-48 object-cover">
-<p class="text-center py-2 font-semibold">Kit de Maquiagem</p>
-</div>
-
-<div class="bg-white rounded-xl shadow-lg w-72 overflow-hidden">
-<img src="assets/img/croche2.jpg" class="w-full h-48 object-cover">
-<p class="text-center py-2 font-semibold">Moda Crochê</p>
-</div>
-
-</div>
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-xs">
+      <img src="https://placehold.co/600x400/6a0dad/ffffff?text=Makeup+by+Patrícia" class="hover:scale-105 transition">
+      <p class="text-center py-2 font-medium">Maquiagem Profissional</p>
+    </div>
+  </div>
 </section>
 
+<!-- PRODUTOS -->
+<section id="produtos" class="container mx-auto p-8">
+  <h2 class="text-3xl font-bold text-custom-roxo text-center mb-8">Produtos de Crochê</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    <div class="bg-white p-6 rounded-xl shadow-xl text-center">
+      <h3 class="text-xl font-bold text-custom-roxo mb-2">Conjunto Crochê Praia</h3>
+      <p class="mb-3">Preço: <strong>25.000 KZ</strong></p>
+      <button data-id="P001" data-name="Conjunto Crochê Praia" data-price="25000"
+        class="btn-add bg-custom-amarelo font-bold py-2 px-4 rounded-full w-full hover:bg-yellow-400">
+        Adicionar ao Carrinho
+      </button>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-xl text-center">
+      <h3 class="text-xl font-bold text-custom-roxo mb-2">Vestido Praia Crochê</h3>
+      <p class="mb-3">Preço: <strong>30.000 KZ</strong></p>
+      <button data-id="P002" data-name="Vestido Praia Crochê" data-price="30000"
+        class="btn-add bg-custom-amarelo font-bold py-2 px-4 rounded-full w-full hover:bg-yellow-400">
+        Adicionar ao Carrinho
+      </button>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-xl text-center">
+      <h3 class="text-xl font-bold text-custom-roxo mb-2">Bolsa de Praia Crochê</h3>
+      <p class="mb-3">Preço: <strong>15.000 KZ</strong></p>
+      <button data-id="P003" data-name="Bolsa de Praia Crochê" data-price="15000"
+        class="btn-add bg-custom-amarelo font-bold py-2 px-4 rounded-full w-full hover:bg-yellow-400">
+        Adicionar ao Carrinho
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- CARRINHO -->
+<section id="carrinho" class="container mx-auto p-8">
+  <div class="bg-white p-6 rounded-xl shadow-xl max-w-md mx-auto text-center">
+    <h2 class="text-2xl font-bold text-custom-roxo mb-4">Carrinho</h2>
+    <div id="cart-list" class="mb-4 text-left text-gray-600 italic">Carrinho vazio</div>
+    <p class="font-bold text-xl mb-4">Total: <span id="cart-total">0</span> KZ</p>
+
+    <a id="finalizar"
+       class="bg-custom-roxo text-white py-3 px-6 rounded-full inline-block opacity-50 pointer-events-none">
+       Finalizar no WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- CONTACTO -->
 <section id="contacto" class="container mx-auto p-8">
-<div class="bg-lilas p-8 rounded-xl shadow-xl max-w-lg mx-auto">
-<h2 class="text-3xl font-bold text-roxo text-center mb-4">Contacto</h2>
-
-<p><strong>WhatsApp:</strong> +244 926 837 464</p>
-<p><strong>Email:</strong> pattasvendas@gmail.com</p>
-<p>
-<strong>Facebook:</strong>
-<a class="text-roxo underline" target="_blank"
-href="https://www.facebook.com/share/1BoyA2k81U/">Patrícia Pattas</a>
-</p>
-</div>
+  <div class="bg-custom-lilas p-6 rounded-xl shadow-xl max-w-md mx-auto">
+    <h2 class="text-2xl font-bold text-custom-roxo mb-4 text-center">Contacto</h2>
+    <p><strong>WhatsApp:</strong> +244 926 837 464</p>
+    <p><strong>Email:</strong> pattasvendas@gmail.com</p>
+  </div>
 </section>
 
-<footer class="bg-roxo text-white text-center py-4">
-© 2025 Patrícia Pattas – Todos os direitos reservados
+<footer class="bg-custom-roxo text-white text-center py-4">
+  © 2025 Patrícia Pattas – Todos os direitos reservados
 </footer>
 
+<!-- JS -->
 <script>
-// CHATBOT SIMPLES LOCAL
-const btn = document.createElement("button");
-btn.textContent = "💬";
-btn.className =
-"fixed bottom-6 right-6 bg-amarelo text-roxo font-bold p-4 rounded-full shadow-xl";
-document.body.appendChild(btn);
+  const cart = [];
+  const cartList = document.getElementById('cart-list');
+  const cartTotal = document.getElementById('cart-total');
+  const finalizar = document.getElementById('finalizar');
+  const WHATSAPP = "244926837464";
 
-btn.onclick = () => alert("Olá! Para compras ou agendamentos, contacte-nos pelo WhatsApp 😊");
+  document.querySelectorAll('.btn-add').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const name = btn.dataset.name;
+      const price = Number(btn.dataset.price);
+      cart.push({ name, price });
+      updateCart();
+    });
+  });
+
+  function updateCart() {
+    cartList.innerHTML = '';
+    let total = 0;
+
+    cart.forEach(item => {
+      total += item.price;
+      cartList.innerHTML += `<div>${item.name} - ${item.price} KZ</div>`;
+    });
+
+    cartTotal.textContent = total;
+
+    if (cart.length) {
+      finalizar.classList.remove('opacity-50','pointer-events-none');
+      finalizar.href = `https://wa.me/${WHATSAPP}?text=Olá! Quero finalizar minha compra. Total: ${total} KZ`;
+    }
+  }
 </script>
 
 </body>
